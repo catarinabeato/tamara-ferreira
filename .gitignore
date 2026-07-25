@@ -1,0 +1,16 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Node (o projecto não tem dependências, mas caso venham a existir)
+node_modules/
+npm-debug.log*
+
+# Nota: dist/ é versionada de propósito — é o site pronto a publicar.
+# Para deixar de a versionar, descomentar a linha seguinte.
+# dist/

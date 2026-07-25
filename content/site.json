@@ -1,0 +1,107 @@
+{
+  "_comment": "Configuração global do site. Editar aqui: domínio, redes sociais, endpoints de formulário e ficheiros de imagem. Os textos estão em content/pt.json e content/en.json.",
+
+  "name": "Tamara Ferreira",
+  "baseUrl": "https://www.tamaraferreira.pt",
+  "basePath": "",
+  "defaultLang": "pt",
+  "languages": ["pt", "en"],
+
+  "contact": {
+    "email": "ola@tamaraferreira.pt",
+    "phone": "+351 000 000 000",
+    "phoneHref": "+351000000000",
+    "addressLines": ["Atlas Language Center", "Rua Exemplo, 00", "1000-000 Lisboa", "Portugal"],
+    "mapEmbed": "https://www.google.com/maps?q=Lisboa,Portugal&output=embed",
+    "mapLink": "https://www.google.com/maps?q=Lisboa,Portugal"
+  },
+
+  "social": [
+    { "name": "LinkedIn", "url": "https://www.linkedin.com/in/tamaraferreira" },
+    { "name": "Instagram", "url": "https://www.instagram.com/tamaraferreira" },
+    { "name": "YouTube", "url": "https://www.youtube.com/@tamaraferreira" }
+  ],
+
+  "forms": {
+    "_comment": "Deixar vazio (\"\") para o formulário abrir o cliente de email do visitante. Preencher com um endpoint (ex.: https://formspree.io/f/xxxxxxx) para envio directo.",
+    "newsletterEndpoint": "",
+    "contactEndpoint": ""
+  },
+
+  "images": {
+    "_comment": "Substituir os ficheiros .svg por fotografias reais (.jpg). Manter as proporções indicadas em cada entrada. Ver README.md.",
+
+    "heroPortrait": {
+      "src": "/assets/img/placeholder-retrato-4x5.svg",
+      "width": 1600,
+      "height": 2000,
+      "ratio": "4:5 (retrato) — 1600x2000 px — fotografia principal da Tamara, plano médio, fundo claro"
+    },
+    "aboutPortrait": {
+      "src": "/assets/img/placeholder-retrato-3x4.svg",
+      "width": 1200,
+      "height": 1600,
+      "ratio": "3:4 (retrato) — 1200x1600 px — retrato secundário para a secção Sobre mim da Home"
+    },
+    "aboutFull": {
+      "src": "/assets/img/placeholder-retrato-4x5.svg",
+      "width": 1600,
+      "height": 2000,
+      "ratio": "4:5 (retrato) — 1600x2000 px — retrato editorial da página Sobre mim"
+    },
+    "projectOne": {
+      "src": "/assets/img/placeholder-projecto-16x9.svg",
+      "width": 1600,
+      "height": 900,
+      "ratio": "16:9 (paisagem) — 1600x900 px — recepção do Atlas Language Center"
+    },
+    "projectTwo": {
+      "src": "/assets/img/placeholder-projecto-16x9.svg",
+      "width": 1600,
+      "height": 900,
+      "ratio": "16:9 (paisagem) — 1600x900 px — sala Nexus / espaço de formação"
+    },
+    "postLideranca": {
+      "src": "/assets/img/placeholder-artigo-3x2.svg",
+      "width": 1200,
+      "height": 800,
+      "ratio": "3:2 (paisagem) — 1200x800 px — imagem de destaque de artigo. Nos cartões aparece a 3:2 (sem corte); no topo do artigo é recortada para 16:9, por isso deixar margem em cima e em baixo"
+    },
+    "postEquipa": {
+      "src": "/assets/img/placeholder-artigo-3x2.svg",
+      "width": 1200,
+      "height": 800,
+      "ratio": "3:2 (paisagem) — 1200x800 px — imagem de destaque de artigo. Nos cartões aparece a 3:2 (sem corte); no topo do artigo é recortada para 16:9, por isso deixar margem em cima e em baixo"
+    },
+    "postMarca": {
+      "src": "/assets/img/placeholder-artigo-3x2.svg",
+      "width": 1200,
+      "height": 800,
+      "ratio": "3:2 (paisagem) — 1200x800 px — imagem de destaque de artigo. Nos cartões aparece a 3:2 (sem corte); no topo do artigo é recortada para 16:9, por isso deixar margem em cima e em baixo"
+    },
+    "postRotina": {
+      "src": "/assets/img/placeholder-artigo-3x2.svg",
+      "width": 1200,
+      "height": 800,
+      "ratio": "3:2 (paisagem) — 1200x800 px — imagem de destaque de artigo. Nos cartões aparece a 3:2 (sem corte); no topo do artigo é recortada para 16:9, por isso deixar margem em cima e em baixo"
+    },
+    "postPalco": {
+      "src": "/assets/img/placeholder-artigo-3x2.svg",
+      "width": 1200,
+      "height": 800,
+      "ratio": "3:2 (paisagem) — 1200x800 px — imagem de destaque de artigo. Nos cartões aparece a 3:2 (sem corte); no topo do artigo é recortada para 16:9, por isso deixar margem em cima e em baixo"
+    },
+    "postDecisoes": {
+      "src": "/assets/img/placeholder-artigo-3x2.svg",
+      "width": 1200,
+      "height": 800,
+      "ratio": "3:2 (paisagem) — 1200x800 px — imagem de destaque de artigo. Nos cartões aparece a 3:2 (sem corte); no topo do artigo é recortada para 16:9, por isso deixar margem em cima e em baixo"
+    },
+    "ogImage": {
+      "src": "/assets/img/placeholder-og-1200x630.svg",
+      "width": 1200,
+      "height": 630,
+      "ratio": "1.91:1 — 1200x630 px — imagem de partilha em redes sociais (Open Graph)"
+    }
+  }
+}

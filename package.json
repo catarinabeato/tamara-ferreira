@@ -1,0 +1,15 @@
+{
+  "name": "tamara-ferreira",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website pessoal de Tamara Ferreira — empresária, líder e speaker. Bilingue PT-PT / EN.",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "node build.js",
+    "serve": "node serve.js",
+    "start": "node build.js && node serve.js"
+  }
+}

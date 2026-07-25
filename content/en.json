@@ -1,0 +1,518 @@
+{
+  "_comment": "All English copy. Mirrors the structure of pt.json — keep the keys identical, change only the values.",
+
+  "lang": "en",
+  "locale": "en-GB",
+  "langLabel": "EN",
+  "langName": "English",
+
+  "routes": {
+    "home": "",
+    "about": "about",
+    "blog": "blog",
+    "contact": "contact",
+    "privacy": "privacy-policy",
+    "terms": "terms-and-conditions"
+  },
+
+  "ui": {
+    "skipToContent": "Skip to content",
+    "menu": "Menu",
+    "close": "Close",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "mainNav": "Main navigation",
+    "footerNav": "Footer navigation",
+    "languageNav": "Language selection",
+    "switchTo": "View this page in Portuguese",
+    "currentLanguage": "Current language: English",
+    "readMore": "Read more",
+    "readArticle": "Read the article",
+    "backToBlog": "Back to the blog",
+    "publishedOn": "Published on",
+    "category": "Category",
+    "required": "required",
+    "sending": "Sending…",
+    "socialNav": "Social media"
+  },
+
+  "nav": {
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+
+  "meta": {
+    "home": {
+      "title": "Tamara Ferreira — Leadership with purpose",
+      "description": "Entrepreneur, leader and speaker. I work with teams and organisations that want to grow without losing what makes them distinct. Based in Portugal."
+    },
+    "about": {
+      "title": "About — Tamara Ferreira",
+      "description": "Tamara Ferreira's path: from her first team to running education and training projects in Portugal."
+    },
+    "blog": {
+      "title": "Blog — Tamara Ferreira",
+      "description": "Writing on leadership, inspiration, motivation and marketing. Notes from someone building, written while building."
+    },
+    "contact": {
+      "title": "Contact — Tamara Ferreira",
+      "description": "Speaking invitations, training, partnerships or interviews. Get in touch directly."
+    },
+    "privacy": {
+      "title": "Privacy Policy — Tamara Ferreira",
+      "description": "How personal data collected through this website is handled."
+    },
+    "terms": {
+      "title": "Terms and Conditions — Tamara Ferreira",
+      "description": "Conditions of use for tamaraferreira.pt."
+    },
+    "postSuffix": " — Tamara Ferreira"
+  },
+
+  "person": {
+    "jobTitle": "Entrepreneur, leader and speaker",
+    "description": "Portuguese entrepreneur, team leader and public speaker. Runs projects in education and adult training.",
+    "sameAsNote": "Social profiles are read from content/site.json."
+  },
+
+  "imageAlt": {
+    "_comment": "Alternative text for each image. Required for accessibility — describe the photograph, not the file.",
+    "heroPortrait": "Tamara Ferreira, mid-shot, facing the camera against a light background.",
+    "aboutPortrait": "Portrait of Tamara Ferreira in a working environment.",
+    "aboutFull": "Editorial portrait of Tamara Ferreira.",
+    "projectOne": "Reception of Atlas Language Center: light wood desk, potted olive tree and glass-walled classrooms.",
+    "projectTwo": "The Nexus training room, with white tablet-arm chairs and a projection screen.",
+    "postLideranca": "Featured image for the article on clarity in leadership.",
+    "postEquipa": "Featured image for the article on hiring in small teams.",
+    "postMarca": "Featured image for the article on honest marketing.",
+    "postRotina": "Featured image for the article on motivation and working routine.",
+    "postPalco": "Featured image for the article on public speaking.",
+    "postDecisoes": "Featured image for the article on deciding with incomplete information.",
+    "ogImage": "Tamara Ferreira — Leadership with purpose."
+  },
+
+  "home": {
+    "hero": {
+      "kicker": "Leadership . Inspiration . Motivation",
+      "headlineLines": [
+        { "text": "Leadership", "style": "italic" },
+        { "text": "WITH", "style": "roman" },
+        { "text": "PURPOSE", "style": "roman" }
+      ],
+      "standfirst": "Entrepreneur, leader and speaker. I help people and organisations grow without losing what makes them distinct.",
+      "cta": "Subscribe to the newsletter",
+      "ctaHref": "#newsletter",
+      "scroll": "Keep reading"
+    },
+
+    "about": {
+      "kicker": "About me",
+      "title": "I started out running rooms. Now I run possibilities.",
+      "paragraphs": [
+        "I'm Tamara. I built my career on the practical side of things: timetables to close, teams to train, books to balance. That's where I learned that leadership is barely noticeable when it's working well.",
+        "I run projects in education and adult training, where technical demands sit alongside real people every single day. That intersection is what interests me.",
+        "I speak publicly about what I do, not about what I've read. I prefer concrete examples to formulas, and an honest conversation to a polished speech."
+      ],
+      "link": "Read the full story"
+    },
+
+    "purpose": {
+      "kicker": "What I stand for",
+      "title": "Four ideas that guide my work",
+      "intro": "These aren't slogans. They're the criteria I use when the choice is hard.",
+      "items": [
+        {
+          "title": "Clarity before speed",
+          "text": "A team that understands the why gets further than a team in a hurry. Explaining well is leadership work, not a courtesy."
+        },
+        {
+          "title": "Standards that hold",
+          "text": "An organisation's real standard is the one it tolerates on bad days. We set standards we can reach, then we honour them every time."
+        },
+        {
+          "title": "People before process",
+          "text": "Process exists to free up time and attention. When it starts consuming both, the process is the problem."
+        },
+        {
+          "title": "Growth without distortion",
+          "text": "Growth is easy to want and hard to sustain. I ask the uncomfortable questions before the step, not after."
+        }
+      ]
+    },
+
+    "projects": {
+      "kicker": "Projects",
+      "title": "What I build",
+      "items": [
+        {
+          "image": "projectOne",
+          "label": "Education",
+          "title": "Atlas Language Center",
+          "text": "A language centre designed down to the detail, from the welcome desk to the light in the classrooms. A student's experience starts long before the first lesson."
+        },
+        {
+          "image": "projectTwo",
+          "label": "Training",
+          "title": "Atlas Academy",
+          "text": "Adult training and corporate programmes. Simple rooms, demanding content, and groups small enough that nobody goes unnoticed."
+        }
+      ]
+    },
+
+    "blog": {
+      "kicker": "Blog",
+      "title": "Recent notes",
+      "intro": "I write regularly about what I'm learning. No miracle recipes.",
+      "link": "See all articles"
+    },
+
+    "contact": {
+      "kicker": "Contact",
+      "title": "Let's talk",
+      "text": "Speaking, training, partnerships or interviews. I answer every message personally, usually within two working days.",
+      "addressLabel": "Address",
+      "emailLabel": "Email",
+      "socialLabel": "Social",
+      "link": "Go to the contact page"
+    }
+  },
+
+  "newsletter": {
+    "kicker": "Newsletter",
+    "title": "One letter a month. No more, no less.",
+    "text": "Once a month I send a note on leadership, hard decisions and what I'm building. Written by me, no promotions, nothing forwarded. You can unsubscribe at any time.",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "email@example.com",
+    "consent": "I agree to my email being used to send me the newsletter.",
+    "submit": "Sign me up",
+    "success": "Thank you. You're subscribed — the next letter goes out at the start of the month.",
+    "error": "We couldn't complete your subscription. Please try again or write to me directly.",
+    "privacyNote": "By subscribing you accept the",
+    "privacyLink": "Privacy Policy"
+  },
+
+  "about": {
+    "kicker": "About me",
+    "headlineLines": [
+      { "text": "The road", "style": "italic" },
+      { "text": "SO FAR", "style": "roman" }
+    ],
+    "standfirst": "I don't have an overnight success story. I have a long sequence of small decisions, almost all of them made with incomplete information.",
+    "sections": [
+      {
+        "title": "The beginning",
+        "paragraphs": [
+          "I started working early, in jobs where nobody asked my opinion. So I learned to watch. I quickly noticed that almost every problem that looked technical was really an unresolved communication problem.",
+          "The first time I led a team I was in my early twenties with no management training. I got plenty wrong: I wanted to be liked, I avoided difficult conversations, I assumed people could guess what I expected of them. It was the best school I could have had."
+        ]
+      },
+      {
+        "title": "Building",
+        "paragraphs": [
+          "Today I run projects in education and adult training. I work with small teams, where there's nowhere to hide poor organisation, and with clients who trust us with time they can't get back.",
+          "My days sit between operational decisions and decisions about direction. Hiring, programmes, rooms, budgets. I like the detail: the temperature of a room and the tone of an email say as much about an organisation as its strategic plan."
+        ]
+      },
+      {
+        "title": "On stage",
+        "paragraphs": [
+          "I've been speaking publicly since I realised that what I learned the hard way could save someone else time. I talk about everyday leadership, about building teams with limited resources, and about what nobody tells you about growing.",
+          "I prepare each talk from scratch, for the context of whoever invites me. I don't bring a generic deck and I don't use the stage to sell anything."
+        ]
+      },
+      {
+        "title": "Outside all this",
+        "paragraphs": [
+          "I live in Portugal, I read more than I can keep up with, and I still think the best idea in any meeting tends to show up in the last five minutes.",
+          "If you've read this far, we probably have something to talk about. My inbox is open."
+        ]
+      }
+    ],
+    "valuesTitle": "How I work",
+    "asSeenIn": {
+      "kicker": "As seen in",
+      "note": "Replace with real logos in content/en.json → about.asSeenIn.items",
+      "items": ["Publication One", "Conference Two", "Radio Three", "Magazine Four", "Podcast Five"]
+    },
+    "testimonials": {
+      "kicker": "Testimonials",
+      "items": [
+        {
+          "quote": "Tamara didn't come in to tell us what to do. She came in and asked the questions we'd been avoiding for two years.",
+          "author": "Board of a client company",
+          "role": "Management training programme"
+        },
+        {
+          "quote": "We left the session with three decisions made. That isn't what usually happens at a talk.",
+          "author": "Organisers of an annual conference",
+          "role": "Education sector"
+        },
+        {
+          "quote": "She's rigorous without being cold. The team felt stretched and supported at the same time.",
+          "author": "Academic coordination team",
+          "role": "Adult training"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Want to work together?",
+      "text": "Tell me the context and what you want to achieve. From there we'll work out together whether it makes sense.",
+      "button": "Get in touch"
+    }
+  },
+
+  "blogPage": {
+    "kicker": "Blog",
+    "headlineLines": [
+      { "text": "Notes from", "style": "roman" },
+      { "text": "the build", "style": "italic" }
+    ],
+    "standfirst": "Short pieces on leadership, inspiration, motivation and marketing. I write while I learn, which means I sometimes change my mind.",
+    "filterLabel": "Filter articles by topic",
+    "all": "All",
+    "empty": "No articles in this topic yet.",
+    "relatedTitle": "Keep reading",
+    "shareLabel": "Share"
+  },
+
+  "categories": {
+    "lideranca": "Leadership",
+    "inspiracao": "Inspiration",
+    "motivacao": "Motivation",
+    "marketing": "Marketing"
+  },
+
+  "contact": {
+    "kicker": "Contact",
+    "headlineLines": [
+      { "text": "Say", "style": "roman" },
+      { "text": "hello", "style": "italic" }
+    ],
+    "standfirst": "Speaking invitations, training proposals, partnerships or interview requests. I read everything and reply personally, usually within two working days.",
+    "formTitle": "Send a message",
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "subjectLabel": "Subject",
+    "subjectOptions": [
+      "Speaking invitation",
+      "Corporate training",
+      "Partnership",
+      "Press and interviews",
+      "Something else"
+    ],
+    "messageLabel": "Message",
+    "messagePlaceholder": "Context, dates and what you want to achieve.",
+    "consent": "I have read and accept the Privacy Policy and agree to my data being used to answer this enquiry.",
+    "consentLinkText": "Privacy Policy",
+    "submit": "Send message",
+    "success": "Message sent. Thank you — I'll reply soon.",
+    "error": "The message couldn't be sent. Please try again or write directly to the email address listed.",
+    "directTitle": "Direct contact",
+    "addressTitle": "Address",
+    "socialTitle": "Social media",
+    "mapTitle": "Location map",
+    "mapLink": "Open in Google Maps",
+    "responseNote": "Usual reply time: two working days."
+  },
+
+  "footer": {
+    "tagline": "Leadership with purpose.",
+    "newsletterPrompt": "One letter a month, written by me.",
+    "navTitle": "Navigate",
+    "legalTitle": "Legal",
+    "copyright": "All rights reserved.",
+    "credits": "Website designed and built in Portugal."
+  },
+
+  "legal": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "updated": "Last updated: January 2026",
+      "intro": "This policy explains what personal data this website collects, why, and what your rights are. Sample document — have it reviewed by a qualified professional before publishing.",
+      "sections": [
+        {
+          "title": "Data controller",
+          "paragraphs": [
+            "The controller of data collected through this website is Tamara Ferreira, reachable at the email address listed on the contact page."
+          ]
+        },
+        {
+          "title": "Data collected",
+          "paragraphs": [
+            "Contact form: name, email, subject and message content.",
+            "Newsletter: name and email address.",
+            "This website uses no advertising cookies and no behavioural tracking."
+          ]
+        },
+        {
+          "title": "Purpose and legal basis",
+          "paragraphs": [
+            "Contact form data is used solely to answer the enquiry sent. Newsletter data is used solely to send the newsletter. In both cases the legal basis is the explicit consent given at the point of submission."
+          ]
+        },
+        {
+          "title": "Retention",
+          "paragraphs": [
+            "Contact messages are kept for as long as needed to follow up on the matter. Newsletter subscription data is kept until the subscription is cancelled."
+          ]
+        },
+        {
+          "title": "Your rights",
+          "paragraphs": [
+            "You may request access to, correction of, deletion of or restriction of the processing of your data at any time, object to processing, and exercise your right to data portability. Just send a request to the email address on the contact page.",
+            "You also have the right to lodge a complaint with the Portuguese data protection authority (CNPD)."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms and Conditions",
+      "updated": "Last updated: January 2026",
+      "intro": "Conditions of use for this website. Sample document — have it reviewed by a qualified professional before publishing.",
+      "sections": [
+        {
+          "title": "Use of the website",
+          "paragraphs": [
+            "This website is informational and presents the professional activity of Tamara Ferreira. Using the website implies full acceptance of these conditions."
+          ]
+        },
+        {
+          "title": "Intellectual property",
+          "paragraphs": [
+            "The text, photographs and other elements of this website belong to their respective owner unless stated otherwise. Reproduction in whole or in part requires prior written permission."
+          ]
+        },
+        {
+          "title": "Content and liability",
+          "paragraphs": [
+            "Blog content reflects the author's personal opinions and does not constitute professional advice. Every effort is made to keep information current, with no guarantee of permanent accuracy."
+          ]
+        },
+        {
+          "title": "External links",
+          "paragraphs": [
+            "This website may link to third-party sites. No responsibility is accepted for their content or privacy practices."
+          ]
+        },
+        {
+          "title": "Governing law",
+          "paragraphs": [
+            "These conditions are governed by Portuguese law. Any dispute will be settled in the courts of Lisbon, with express waiver of any other jurisdiction."
+          ]
+        }
+      ]
+    }
+  },
+
+  "posts": [
+    {
+      "id": "clareza",
+      "slug": "clarity-is-an-act-of-leadership",
+      "date": "2026-06-18",
+      "category": "lideranca",
+      "image": "postLideranca",
+      "title": "Clarity is an act of leadership",
+      "excerpt": "I spent years confusing clarity with rigidity. They're different things, and the difference costs money.",
+      "body": [
+        { "type": "p", "text": "For a long time I thought being clear meant being hard. That telling someone exactly what I expected took away their room to think. I was wrong, and the price of being wrong was paid in rework." },
+        { "type": "p", "text": "Ambiguity seems kind. It isn't. Someone who leaves a meeting unsure what's expected of them will spend the week guessing. They'll deliver what they think was asked, we'll correct it, and we both walk away feeling the other wasn't listening." },
+        { "type": "h", "text": "What I changed" },
+        { "type": "p", "text": "I started ending important conversations with a simple question: so what have we agreed? Not as a formality, but as a check. Half the time I found we'd agreed different things." },
+        { "type": "quote", "text": "Explaining well isn't a courtesy. It's the part of the job that depends most on whoever's leading." },
+        { "type": "p", "text": "I also learned to separate two things I used to blur: the outcome I need and the route to get there. On the outcome I'm specific down to the detail. On the route, I listen first." },
+        { "type": "h", "text": "The test" },
+        { "type": "p", "text": "If the person who took on the task can't explain it to a colleague in two sentences, the problem isn't theirs. It's mine. I've used this as my benchmark for three years and I still fail often enough to keep using it." }
+      ]
+    },
+    {
+      "id": "equipa",
+      "slug": "hiring-slowly-in-small-teams",
+      "date": "2026-05-27",
+      "category": "lideranca",
+      "image": "postEquipa",
+      "title": "Hiring slowly in small teams",
+      "excerpt": "In a team of six, every hire is sixteen per cent of the culture. Worth thinking twice.",
+      "body": [
+        { "type": "p", "text": "In large organisations, a bad hire is a management problem. In small teams, it's an identity problem. That's a difference in kind, not in scale." },
+        { "type": "p", "text": "I've hired in a hurry. There was too much work, the application looked good and I wanted it settled before the end of the month. I fixed the month and ruined the half-year." },
+        { "type": "h", "text": "What I do now" },
+        { "type": "p", "text": "I describe the role by what's hard about it, not by what's attractive. Anyone put off by an honest description would have been put off anyway, three months later, at greater cost to everyone." },
+        { "type": "p", "text": "I always ask for a short piece of paid work. Not a trick test — real work with a realistic deadline. I learn more in two hours of working together than in three interviews." },
+        { "type": "quote", "text": "I'd rather be short-staffed for another month than have the wrong person for another year." },
+        { "type": "p", "text": "And I stopped hiring alone. Whoever will work with the person takes part in the decision. Not for the sake of democracy — for shared ownership of the welcome that follows." }
+      ]
+    },
+    {
+      "id": "marca",
+      "slug": "honest-marketing-for-small-businesses",
+      "date": "2026-05-06",
+      "category": "marketing",
+      "image": "postMarca",
+      "title": "Honest marketing for small businesses",
+      "excerpt": "We can't afford to overstate anything. It's our biggest competitive advantage.",
+      "body": [
+        { "type": "p", "text": "A small business doesn't survive a broken promise. Someone who feels misled doesn't file a complaint: they disappear and tell three friends." },
+        { "type": "p", "text": "So our communication is boringly literal. We state the timetable, the price, the number of students per group and what happens if you miss a class. None of it is seductive. All of it converts." },
+        { "type": "h", "text": "Show instead of adjective" },
+        { "type": "p", "text": "We stopped writing that the space is welcoming and started photographing it properly. We stopped writing that the team is experienced and started saying how many years each person has been teaching." },
+        { "type": "quote", "text": "An adjective is an opinion. A number is evidence." },
+        { "type": "p", "text": "The practical result: fewer enquiries, more enrolments. The people who arrive already know what they're coming for, and that saves everyone hours of conversation." }
+      ]
+    },
+    {
+      "id": "rotina",
+      "slug": "motivation-doesnt-arrive-you-fetch-it",
+      "date": "2026-04-14",
+      "category": "motivacao",
+      "image": "postRotina",
+      "title": "Motivation doesn't arrive. You fetch it",
+      "excerpt": "On the days when I don't feel like anything and the work has to get done anyway.",
+      "body": [
+        { "type": "p", "text": "I'm suspicious of anyone who says they always wake up motivated. Either their life is very simple or they're rounding up." },
+        { "type": "p", "text": "Most of my good days started out as bad days that held on until noon. There's no trick to it. There's one small decision made at eight in the morning." },
+        { "type": "h", "text": "Three things that work for me" },
+        { "type": "p", "text": "First: I shrink the day's goal until it stops being frightening. I'm not restructuring the programme; I'm writing the first page." },
+        { "type": "p", "text": "Second: I start with the task that involves someone else. A commitment to a person pulls me forward better than willpower does." },
+        { "type": "quote", "text": "Discipline isn't feeling like it. It's shrinking the first step until it becomes inevitable." },
+        { "type": "p", "text": "Third: I accept lost days without turning them into lost weeks. A bad day is a data point. A bad week is a signal, and that's worth stopping for." }
+      ]
+    },
+    {
+      "id": "palco",
+      "slug": "what-public-speaking-taught-me",
+      "date": "2026-03-19",
+      "category": "inspiracao",
+      "image": "postPalco",
+      "title": "What public speaking taught me",
+      "excerpt": "I'm still nervous before going on stage. What changed is what I do with the nerves.",
+      "body": [
+        { "type": "p", "text": "The first time I spoke to a room of more than a hundred people I spent the previous week memorising the script. It went badly, precisely because of that: I was reciting, not speaking." },
+        { "type": "p", "text": "Now I prepare twice as much and memorise nothing. I know the three points I want to land and I know the stories that carry them. The rest happens in the room." },
+        { "type": "h", "text": "Preparing for the context" },
+        { "type": "p", "text": "Before every talk I ask the organisers three things: who's in the room, what's happened in the organisation over the last six months, and what they'd like people to do the next day. Without that, any talk is generic." },
+        { "type": "quote", "text": "Nobody remembers the structure of a talk. They remember one sentence and how it felt to hear it." },
+        { "type": "p", "text": "And I stopped trying to hide the nerves. Saying it out loud in the first thirty seconds tends to be the fastest way to defuse it — and to get the room on your side." }
+      ]
+    },
+    {
+      "id": "decisoes",
+      "slug": "deciding-with-incomplete-information",
+      "date": "2026-02-25",
+      "category": "inspiracao",
+      "image": "postDecisoes",
+      "title": "Deciding with incomplete information",
+      "excerpt": "I'm never going to have all the data. The question is when to stop looking for it.",
+      "body": [
+        { "type": "p", "text": "Postponing a decision is also a decision. It's usually the most expensive one, because it never shows up anywhere as a decision." },
+        { "type": "p", "text": "I use one question to unstick myself: is this choice reversible? If it is, I decide fast and correct later. If it isn't, I give it the time and the people it deserves." },
+        { "type": "h", "text": "The cost of waiting" },
+        { "type": "p", "text": "Before asking for one more analysis, I try to estimate what it buys me. If the extra information doesn't change the choice, it isn't worth the time it costs." },
+        { "type": "quote", "text": "Almost every decision I regret wasn't a wrong choice. It was a right choice made too late." },
+        { "type": "p", "text": "Finally, I write down the decision and the reason for it somewhere I'll reread in six months. Not to judge myself — to find out whether my judgement was good or just my luck." }
+      ]
+    }
+  ]
+}

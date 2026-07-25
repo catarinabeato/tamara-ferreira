@@ -1,0 +1,518 @@
+{
+  "_comment": "Todo o texto em Português de Portugal. Editar livremente sem tocar no código. A ordem das chaves não importa; os nomes das chaves não devem ser alterados.",
+
+  "lang": "pt",
+  "locale": "pt-PT",
+  "langLabel": "PT",
+  "langName": "Português",
+
+  "routes": {
+    "home": "",
+    "about": "sobre-mim",
+    "blog": "blog",
+    "contact": "contactos",
+    "privacy": "politica-de-privacidade",
+    "terms": "termos-e-condicoes"
+  },
+
+  "ui": {
+    "skipToContent": "Saltar para o conteúdo",
+    "menu": "Menu",
+    "close": "Fechar",
+    "openMenu": "Abrir menu de navegação",
+    "closeMenu": "Fechar menu de navegação",
+    "mainNav": "Navegação principal",
+    "footerNav": "Navegação de rodapé",
+    "languageNav": "Escolha de idioma",
+    "switchTo": "Ver esta página em Inglês",
+    "currentLanguage": "Idioma actual: Português",
+    "readMore": "Ler mais",
+    "readArticle": "Ler o artigo",
+    "backToBlog": "Voltar ao blog",
+    "publishedOn": "Publicado a",
+    "category": "Categoria",
+    "required": "obrigatório",
+    "sending": "A enviar…",
+    "socialNav": "Redes sociais"
+  },
+
+  "nav": {
+    "about": "Sobre mim",
+    "blog": "Blog",
+    "contact": "Contactos"
+  },
+
+  "meta": {
+    "home": {
+      "title": "Tamara Ferreira — Liderança com propósito",
+      "description": "Empresária, líder e speaker. Trabalho com equipas e organizações que querem crescer sem perder a sua identidade. Sedeada em Portugal."
+    },
+    "about": {
+      "title": "Sobre mim — Tamara Ferreira",
+      "description": "O percurso de Tamara Ferreira: da primeira equipa à direcção de projectos de educação e formação em Portugal."
+    },
+    "blog": {
+      "title": "Blog — Tamara Ferreira",
+      "description": "Textos sobre liderança, inspiração, motivação e marketing. Notas de quem está a construir, escritas enquanto se constrói."
+    },
+    "contact": {
+      "title": "Contactos — Tamara Ferreira",
+      "description": "Convites para palestras, formação, parcerias ou entrevistas. Fale comigo directamente."
+    },
+    "privacy": {
+      "title": "Política de Privacidade — Tamara Ferreira",
+      "description": "Como são tratados os dados pessoais recolhidos neste website."
+    },
+    "terms": {
+      "title": "Termos e Condições — Tamara Ferreira",
+      "description": "Condições de utilização do website tamaraferreira.pt."
+    },
+    "postSuffix": " — Tamara Ferreira"
+  },
+
+  "person": {
+    "jobTitle": "Empresária, líder e speaker",
+    "description": "Empresária portuguesa, líder de equipas e oradora. Dirige projectos na área da educação e da formação de adultos.",
+    "sameAsNote": "Os perfis sociais são lidos de content/site.json."
+  },
+
+  "imageAlt": {
+    "_comment": "Texto alternativo de cada imagem. Obrigatório para acessibilidade — descrever o conteúdo da fotografia, não o ficheiro.",
+    "heroPortrait": "Tamara Ferreira, em plano médio, de frente para a câmara, sobre fundo claro.",
+    "aboutPortrait": "Retrato de Tamara Ferreira em ambiente de trabalho.",
+    "aboutFull": "Retrato editorial de Tamara Ferreira.",
+    "projectOne": "Recepção do Atlas Language Center: balcão em madeira clara, oliveira em vaso e salas envidraçadas.",
+    "projectTwo": "Sala de formação Nexus, com cadeiras brancas com tampo e tela de projecção.",
+    "postLideranca": "Imagem de destaque do artigo sobre clareza na liderança.",
+    "postEquipa": "Imagem de destaque do artigo sobre contratação em equipas pequenas.",
+    "postMarca": "Imagem de destaque do artigo sobre marketing honesto.",
+    "postRotina": "Imagem de destaque do artigo sobre motivação e rotina de trabalho.",
+    "postPalco": "Imagem de destaque do artigo sobre falar em público.",
+    "postDecisoes": "Imagem de destaque do artigo sobre decidir com informação incompleta.",
+    "ogImage": "Tamara Ferreira — Liderança com propósito."
+  },
+
+  "home": {
+    "hero": {
+      "kicker": "Liderança . Inspiração . Motivação",
+      "headlineLines": [
+        { "text": "Liderança", "style": "italic" },
+        { "text": "COM", "style": "roman" },
+        { "text": "PROPÓSITO", "style": "roman" }
+      ],
+      "standfirst": "Empresária, líder e speaker. Ajudo pessoas e organizações a crescer sem perderem aquilo que as torna distintas.",
+      "cta": "Subscrever a newsletter",
+      "ctaHref": "#newsletter",
+      "scroll": "Continuar a ler"
+    },
+
+    "about": {
+      "kicker": "Sobre mim",
+      "title": "Comecei por gerir salas. Hoje giro possibilidades.",
+      "paragraphs": [
+        "Sou a Tamara. Construí a minha carreira do lado prático das coisas: horários por fechar, equipas por formar, contas por equilibrar. Foi aí que aprendi que a liderança se nota pouco quando está a funcionar bem.",
+        "Dirijo projectos na área da educação e da formação de adultos, onde a exigência técnica convive todos os dias com pessoas reais. É esse cruzamento que me interessa.",
+        "Falo em público sobre aquilo que faço, não sobre aquilo que li. Prefiro exemplos concretos a fórmulas, e prefiro uma conversa honesta a um discurso bonito."
+      ],
+      "link": "Ler o percurso completo"
+    },
+
+    "purpose": {
+      "kicker": "O que defendo",
+      "title": "Quatro ideias que orientam o meu trabalho",
+      "intro": "Não são slogans. São critérios de decisão que uso quando a escolha é difícil.",
+      "items": [
+        {
+          "title": "Clareza antes de velocidade",
+          "text": "Uma equipa que percebe o porquê chega mais longe do que uma equipa apressada. Explicar bem é trabalho de liderança, não uma cortesia."
+        },
+        {
+          "title": "Padrões que se cumprem",
+          "text": "O nível de exigência de uma organização é aquele que ela tolera nos dias maus. Definimos padrões alcançáveis e depois honramo-los sempre."
+        },
+        {
+          "title": "Pessoas antes de processos",
+          "text": "Os processos existem para libertar tempo e atenção. Quando passam a consumir os dois, o problema é o processo."
+        },
+        {
+          "title": "Crescer sem se desfigurar",
+          "text": "Crescer é fácil de desejar e difícil de sustentar. Faço as perguntas incómodas antes de dar o passo, não depois."
+        }
+      ]
+    },
+
+    "projects": {
+      "kicker": "Projectos",
+      "title": "Aquilo que construo",
+      "items": [
+        {
+          "image": "projectOne",
+          "label": "Educação",
+          "title": "Atlas Language Center",
+          "text": "Um centro de línguas pensado ao detalhe, do atendimento à luz das salas. A experiência de quem estuda começa muito antes da primeira aula."
+        },
+        {
+          "image": "projectTwo",
+          "label": "Formação",
+          "title": "Atlas Academy",
+          "text": "Formação de adultos e programas para empresas. Salas simples, conteúdos exigentes e turmas pequenas o suficiente para ninguém passar despercebido."
+        }
+      ]
+    },
+
+    "blog": {
+      "kicker": "Blog",
+      "title": "Notas recentes",
+      "intro": "Escrevo com regularidade sobre o que estou a aprender. Sem receitas milagrosas.",
+      "link": "Ver todos os artigos"
+    },
+
+    "contact": {
+      "kicker": "Contactos",
+      "title": "Vamos falar",
+      "text": "Palestras, formação, parcerias ou entrevistas. Respondo pessoalmente a todas as mensagens, normalmente em dois dias úteis.",
+      "addressLabel": "Morada",
+      "emailLabel": "Email",
+      "socialLabel": "Redes",
+      "link": "Ir para a página de contactos"
+    }
+  },
+
+  "newsletter": {
+    "kicker": "Newsletter",
+    "title": "Uma carta por mês. Nem mais, nem menos.",
+    "text": "Uma vez por mês envio uma nota sobre liderança, decisões difíceis e o que estou a construir. Texto escrito por mim, sem promoções e sem reencaminhamentos. Pode cancelar a subscrição em qualquer momento.",
+    "nameLabel": "Nome",
+    "namePlaceholder": "O seu nome",
+    "emailLabel": "Email",
+    "emailPlaceholder": "email@exemplo.pt",
+    "consent": "Autorizo o tratamento do meu email para efeitos de envio da newsletter.",
+    "submit": "Quero receber",
+    "success": "Obrigada. Está subscrito — a próxima carta segue no início do mês.",
+    "error": "Não foi possível concluir a subscrição. Tente novamente ou escreva-me directamente.",
+    "privacyNote": "Ao subscrever, aceita a",
+    "privacyLink": "Política de Privacidade"
+  },
+
+  "about": {
+    "kicker": "Sobre mim",
+    "headlineLines": [
+      { "text": "O percurso", "style": "italic" },
+      { "text": "ATÉ AQUI", "style": "roman" }
+    ],
+    "standfirst": "Não tenho uma história de sucesso repentino. Tenho uma sequência longa de decisões pequenas, quase todas tomadas com informação incompleta.",
+    "sections": [
+      {
+        "title": "O princípio",
+        "paragraphs": [
+          "Comecei a trabalhar cedo, em funções onde ninguém me perguntava a opinião. Aprendi a observar. Percebi depressa que quase todos os problemas que pareciam técnicos eram, na verdade, problemas de comunicação por resolver.",
+          "A primeira vez que liderei uma equipa tinha vinte e poucos anos e nenhuma formação em gestão. Errei muito: quis agradar, evitei conversas difíceis, assumi que as pessoas adivinhavam o que eu esperava delas. Foi a melhor escola que podia ter tido."
+        ]
+      },
+      {
+        "title": "A construir",
+        "paragraphs": [
+          "Hoje dirijo projectos na área da educação e da formação de adultos. Trabalho com equipas pequenas, onde não há onde esconder falhas de organização, e com clientes que confiam em nós tempo que não podem repetir.",
+          "Passo os dias entre decisões operacionais e decisões de rumo. Contratações, programas, salas, orçamentos. Gosto do detalhe: a temperatura de uma sala e o tom de uma resposta por email dizem tanto sobre uma organização como o seu plano estratégico."
+        ]
+      },
+      {
+        "title": "No palco",
+        "paragraphs": [
+          "Falo em público desde que percebi que aquilo que aprendi a duras penas pode poupar tempo a outra pessoa. Falo sobre liderança quotidiana, sobre construir equipas em contextos de recursos limitados e sobre o que ninguém conta acerca de crescer.",
+          "Preparo cada intervenção de raiz, para o contexto de quem me convida. Não trago uma apresentação genérica e não uso o palco para vender nada."
+        ]
+      },
+      {
+        "title": "Fora disto",
+        "paragraphs": [
+          "Vivo em Portugal, leio mais do que consigo acompanhar e continuo a achar que a melhor ideia de uma reunião costuma aparecer nos últimos cinco minutos.",
+          "Se chegou até aqui, provavelmente temos assunto. A minha caixa de entrada está aberta."
+        ]
+      }
+    ],
+    "valuesTitle": "Como trabalho",
+    "asSeenIn": {
+      "kicker": "Como visto em",
+      "note": "Substituir por logótipos reais em content/pt.json → about.asSeenIn.items",
+      "items": ["Publicação Um", "Conferência Dois", "Rádio Três", "Revista Quatro", "Podcast Cinco"]
+    },
+    "testimonials": {
+      "kicker": "Testemunhos",
+      "items": [
+        {
+          "quote": "A Tamara não veio dizer-nos o que fazer. Veio fazer as perguntas que andávamos a evitar há dois anos.",
+          "author": "Direcção de uma empresa cliente",
+          "role": "Programa de formação de quadros"
+        },
+        {
+          "quote": "Saímos da sessão com três decisões tomadas. Não é o que costuma acontecer numa palestra.",
+          "author": "Organização de um encontro anual",
+          "role": "Sector da educação"
+        },
+        {
+          "quote": "É rigorosa sem ser fria. A equipa sentiu-se exigida e acompanhada ao mesmo tempo.",
+          "author": "Coordenação pedagógica",
+          "role": "Formação de adultos"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Quer trabalhar comigo?",
+      "text": "Conte-me o contexto e o que quer alcançar. A partir daí percebemos juntos se faz sentido.",
+      "button": "Falar comigo"
+    }
+  },
+
+  "blogPage": {
+    "kicker": "Blog",
+    "headlineLines": [
+      { "text": "Notas de", "style": "roman" },
+      { "text": "quem constrói", "style": "italic" }
+    ],
+    "standfirst": "Textos curtos sobre liderança, inspiração, motivação e marketing. Escrevo enquanto aprendo, o que significa que às vezes mudo de ideias.",
+    "filterLabel": "Filtrar artigos por tema",
+    "all": "Todos",
+    "empty": "Ainda não há artigos neste tema.",
+    "relatedTitle": "Continuar a ler",
+    "shareLabel": "Partilhar"
+  },
+
+  "categories": {
+    "lideranca": "Liderança",
+    "inspiracao": "Inspiração",
+    "motivacao": "Motivação",
+    "marketing": "Marketing"
+  },
+
+  "contact": {
+    "kicker": "Contactos",
+    "headlineLines": [
+      { "text": "Diga", "style": "roman" },
+      { "text": "olá", "style": "italic" }
+    ],
+    "standfirst": "Convites para palestras, propostas de formação, parcerias ou pedidos de entrevista. Leio tudo e respondo pessoalmente, normalmente em dois dias úteis.",
+    "formTitle": "Enviar mensagem",
+    "nameLabel": "Nome",
+    "emailLabel": "Email",
+    "subjectLabel": "Assunto",
+    "subjectOptions": [
+      "Convite para palestra",
+      "Formação para empresas",
+      "Parceria",
+      "Imprensa e entrevistas",
+      "Outro assunto"
+    ],
+    "messageLabel": "Mensagem",
+    "messagePlaceholder": "Contexto, datas e aquilo que quer alcançar.",
+    "consent": "Li e aceito a Política de Privacidade e autorizo o tratamento dos meus dados para efeitos de resposta a este contacto.",
+    "consentLinkText": "Política de Privacidade",
+    "submit": "Enviar mensagem",
+    "success": "Mensagem enviada. Obrigada — respondo em breve.",
+    "error": "Não foi possível enviar a mensagem. Tente novamente ou escreva directamente para o email indicado.",
+    "directTitle": "Contacto directo",
+    "addressTitle": "Morada",
+    "socialTitle": "Redes sociais",
+    "mapTitle": "Mapa da localização",
+    "mapLink": "Abrir no Google Maps",
+    "responseNote": "Resposta habitual em dois dias úteis."
+  },
+
+  "footer": {
+    "tagline": "Liderança com propósito.",
+    "newsletterPrompt": "Uma carta por mês, escrita por mim.",
+    "navTitle": "Navegar",
+    "legalTitle": "Legal",
+    "copyright": "Todos os direitos reservados.",
+    "credits": "Website desenhado e construído em Portugal."
+  },
+
+  "legal": {
+    "privacy": {
+      "title": "Política de Privacidade",
+      "updated": "Última actualização: Janeiro de 2026",
+      "intro": "Esta política explica que dados pessoais são recolhidos neste website, com que finalidade e quais os seus direitos. Documento de exemplo — deve ser revisto por profissional qualificado antes da publicação.",
+      "sections": [
+        {
+          "title": "Responsável pelo tratamento",
+          "paragraphs": [
+            "O responsável pelo tratamento dos dados recolhidos neste website é Tamara Ferreira, contactável através do email indicado na página de contactos."
+          ]
+        },
+        {
+          "title": "Dados recolhidos",
+          "paragraphs": [
+            "Formulário de contacto: nome, email, assunto e conteúdo da mensagem.",
+            "Newsletter: nome e endereço de email.",
+            "Não são utilizados cookies de publicidade nem de seguimento comportamental neste website."
+          ]
+        },
+        {
+          "title": "Finalidade e fundamento",
+          "paragraphs": [
+            "Os dados do formulário de contacto são tratados exclusivamente para responder ao pedido enviado. Os dados da newsletter são tratados exclusivamente para o envio periódico da mesma. Em ambos os casos, o fundamento é o consentimento expresso, dado no momento do envio."
+          ]
+        },
+        {
+          "title": "Conservação",
+          "paragraphs": [
+            "As mensagens de contacto são conservadas pelo período necessário ao acompanhamento do assunto. Os dados de subscrição da newsletter são conservados até ao cancelamento da subscrição."
+          ]
+        },
+        {
+          "title": "Os seus direitos",
+          "paragraphs": [
+            "Pode solicitar, a qualquer momento, o acesso, a rectificação, o apagamento ou a limitação do tratamento dos seus dados, bem como opor-se ao tratamento e exercer o direito à portabilidade. Basta enviar um pedido para o email indicado na página de contactos.",
+            "Tem também o direito de apresentar reclamação junto da Comissão Nacional de Protecção de Dados."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Termos e Condições",
+      "updated": "Última actualização: Janeiro de 2026",
+      "intro": "Condições de utilização deste website. Documento de exemplo — deve ser revisto por profissional qualificado antes da publicação.",
+      "sections": [
+        {
+          "title": "Utilização do website",
+          "paragraphs": [
+            "Este website tem natureza informativa e destina-se à apresentação da actividade profissional de Tamara Ferreira. A utilização do website implica a aceitação integral destas condições."
+          ]
+        },
+        {
+          "title": "Propriedade intelectual",
+          "paragraphs": [
+            "Os textos, fotografias e restantes elementos deste website são propriedade da respectiva titular, salvo indicação em contrário. A reprodução total ou parcial carece de autorização prévia e escrita."
+          ]
+        },
+        {
+          "title": "Conteúdos e responsabilidade",
+          "paragraphs": [
+            "Os conteúdos publicados no blog reflectem opiniões pessoais da autora e não constituem aconselhamento profissional. É feito um esforço para manter a informação actualizada, sem garantia de exactidão permanente."
+          ]
+        },
+        {
+          "title": "Ligações externas",
+          "paragraphs": [
+            "Este website pode conter ligações para sítios de terceiros. Não é assumida responsabilidade pelos conteúdos ou pelas práticas de privacidade desses sítios."
+          ]
+        },
+        {
+          "title": "Lei aplicável",
+          "paragraphs": [
+            "Estas condições regem-se pela lei portuguesa. Para a resolução de qualquer litígio é competente o foro da comarca de Lisboa, com expressa renúncia a qualquer outro."
+          ]
+        }
+      ]
+    }
+  },
+
+  "posts": [
+    {
+      "id": "clareza",
+      "slug": "a-clareza-e-um-acto-de-lideranca",
+      "date": "2026-06-18",
+      "category": "lideranca",
+      "image": "postLideranca",
+      "title": "A clareza é um acto de liderança",
+      "excerpt": "Passei anos a confundir clareza com rigidez. São coisas diferentes, e a diferença custa dinheiro.",
+      "body": [
+        { "type": "p", "text": "Durante muito tempo achei que ser clara era ser dura. Que dizer exactamente o que esperava de alguém era retirar-lhe espaço para pensar. Estava enganada, e o preço desse engano foi pago em retrabalho." },
+        { "type": "p", "text": "A ambiguidade parece simpática. Não é. Uma pessoa que sai de uma reunião sem perceber o que se espera dela vai gastar a semana a adivinhar. Vai entregar aquilo que julga ser o pedido, vamos corrigir, e ambas ficamos com a sensação de que a outra não estava a ouvir." },
+        { "type": "h", "text": "O que mudei" },
+        { "type": "p", "text": "Comecei a terminar as conversas importantes com uma frase simples: o que é que fica combinado? Não como formalidade, mas como verificação. Em metade dos casos descobri que tínhamos combinado coisas diferentes." },
+        { "type": "quote", "text": "Explicar bem não é uma cortesia. É a parte do trabalho que mais depende de quem lidera." },
+        { "type": "p", "text": "Também aprendi a separar duas coisas que costumava misturar: o resultado que preciso e o caminho para lá chegar. Sobre o resultado sou específica ao detalhe. Sobre o caminho, ouço primeiro." },
+        { "type": "h", "text": "O teste" },
+        { "type": "p", "text": "Se a pessoa que recebeu a tarefa não a consegue explicar a um colega em duas frases, o problema não é dela. É meu. Uso isto como critério há três anos e ainda falho com regularidade suficiente para continuar a usá-lo." }
+      ]
+    },
+    {
+      "id": "equipa",
+      "slug": "contratar-devagar-em-equipas-pequenas",
+      "date": "2026-05-27",
+      "category": "lideranca",
+      "image": "postEquipa",
+      "title": "Contratar devagar em equipas pequenas",
+      "excerpt": "Numa equipa de seis pessoas, cada contratação é dezasseis por cento da cultura. Convém pensar duas vezes.",
+      "body": [
+        { "type": "p", "text": "Em organizações grandes, uma má contratação é um problema de gestão. Em equipas pequenas, é um problema de identidade. A diferença não é de escala, é de natureza." },
+        { "type": "p", "text": "Já contratei à pressa. Havia trabalho a mais, a candidatura parecia boa e eu queria resolver o assunto antes do fim do mês. Resolvi o mês e estraguei o semestre." },
+        { "type": "h", "text": "O que faço agora" },
+        { "type": "p", "text": "Descrevo a função pelo que ela tem de difícil, não pelo que tem de atractivo. Quem se assusta com a descrição honesta ia assustar-se na mesma, três meses depois, com mais custo para todos." },
+        { "type": "p", "text": "Peço sempre um trabalho curto e pago. Não um teste de armadilha, um trabalho real com prazo realista. Aprendo mais em duas horas de trabalho conjunto do que em três entrevistas." },
+        { "type": "quote", "text": "Prefiro estar com falta de gente durante mais um mês do que com a pessoa errada durante mais um ano." },
+        { "type": "p", "text": "E deixei de contratar sozinha. Quem vai trabalhar com a pessoa participa na decisão. Não por democracia — por responsabilidade partilhada no acolhimento que vem a seguir." }
+      ]
+    },
+    {
+      "id": "marca",
+      "slug": "marketing-honesto-para-negocios-pequenos",
+      "date": "2026-05-06",
+      "category": "marketing",
+      "image": "postMarca",
+      "title": "Marketing honesto para negócios pequenos",
+      "excerpt": "Não temos orçamento para exagerar. É a nossa maior vantagem competitiva.",
+      "body": [
+        { "type": "p", "text": "Um negócio pequeno não sobrevive a uma promessa por cumprir. A pessoa que se sentiu enganada não escreve uma reclamação: desaparece e conta a três amigos." },
+        { "type": "p", "text": "Por isso a nossa comunicação é aborrecidamente literal. Dizemos o horário, o preço, o número de alunos por turma e o que acontece se faltar a uma aula. Nada disto é sedutor. Tudo isto converte." },
+        { "type": "h", "text": "Mostrar em vez de adjectivar" },
+        { "type": "p", "text": "Deixámos de escrever que o espaço é acolhedor e passámos a fotografá-lo bem. Deixámos de escrever que a equipa é experiente e passámos a dizer há quantos anos cada pessoa ensina." },
+        { "type": "quote", "text": "Um adjectivo é uma opinião. Um número é uma prova." },
+        { "type": "p", "text": "O resultado prático: menos pedidos de informação, mais inscrições. As pessoas que chegam já sabem ao que vêm, e isso poupa horas de conversa a toda a gente." }
+      ]
+    },
+    {
+      "id": "rotina",
+      "slug": "a-motivacao-nao-aparece-vai-se-buscar",
+      "date": "2026-04-14",
+      "category": "motivacao",
+      "image": "postRotina",
+      "title": "A motivação não aparece. Vai-se buscar",
+      "excerpt": "Sobre os dias em que nada me apetece e o trabalho tem de sair na mesma.",
+      "body": [
+        { "type": "p", "text": "Desconfio de quem diz que acorda sempre motivado. Ou tem uma vida muito simples ou está a arredondar a verdade." },
+        { "type": "p", "text": "A maior parte dos meus dias bons começou por ser um dia mau que se aguentou até ao meio-dia. Não há truque nenhum nisto. Há uma decisão pequena tomada às oito da manhã." },
+        { "type": "h", "text": "Três coisas que funcionam comigo" },
+        { "type": "p", "text": "Primeiro: baixo o objectivo do dia até ele deixar de meter medo. Não vou reestruturar o programa; vou escrever a primeira página." },
+        { "type": "p", "text": "Segundo: começo pela tarefa que envolve outra pessoa. O compromisso com alguém puxa-me para a frente melhor do que a força de vontade." },
+        { "type": "quote", "text": "A disciplina não é sentir vontade. É reduzir o tamanho do primeiro passo até ele ser inevitável." },
+        { "type": "p", "text": "Terceiro: aceito os dias perdidos sem os transformar em semanas perdidas. Um dia mau é um dado. Uma semana má é um sinal, e aí vale a pena parar para perceber o que se passa." }
+      ]
+    },
+    {
+      "id": "palco",
+      "slug": "o-que-aprendi-a-falar-em-publico",
+      "date": "2026-03-19",
+      "category": "inspiracao",
+      "image": "postPalco",
+      "title": "O que aprendi a falar em público",
+      "excerpt": "Continuo nervosa antes de subir ao palco. Mudou o que faço com esse nervosismo.",
+      "body": [
+        { "type": "p", "text": "A primeira vez que falei para uma sala com mais de cem pessoas passei a semana anterior a decorar o texto. Correu mal, precisamente por isso: estava a recitar, não estava a falar." },
+        { "type": "p", "text": "Hoje preparo o dobro e decoro zero. Sei os três pontos que quero deixar e conheço bem as histórias que os sustentam. O resto acontece na sala." },
+        { "type": "h", "text": "Preparar para o contexto" },
+        { "type": "p", "text": "Antes de cada intervenção pergunto a quem me convida três coisas: quem está na sala, o que aconteceu na organização nos últimos seis meses e o que gostariam que as pessoas fizessem no dia seguinte. Sem isto, qualquer apresentação é genérica." },
+        { "type": "quote", "text": "Ninguém se lembra da estrutura da apresentação. Lembram-se de uma frase e de como se sentiram a ouvi-la." },
+        { "type": "p", "text": "E deixei de tentar esconder o nervosismo. Dizê-lo em voz alta nos primeiros trinta segundos costuma ser a forma mais rápida de o desactivar — e de a sala ficar do meu lado." }
+      ]
+    },
+    {
+      "id": "decisoes",
+      "slug": "decidir-com-informacao-incompleta",
+      "date": "2026-02-25",
+      "category": "inspiracao",
+      "image": "postDecisoes",
+      "title": "Decidir com informação incompleta",
+      "excerpt": "Nunca vou ter todos os dados. A questão é saber quando parar de os procurar.",
+      "body": [
+        { "type": "p", "text": "Adiar uma decisão também é decidir. Costuma ser a decisão mais cara, porque não aparece em lado nenhum como decisão." },
+        { "type": "p", "text": "Uso uma pergunta para me desbloquear: esta escolha é reversível? Se for, decido depressa e corrijo depois. Se não for, dou-lhe o tempo e as pessoas que ela merece." },
+        { "type": "h", "text": "O custo de esperar" },
+        { "type": "p", "text": "Antes de pedir mais um estudo, tento estimar o que ganho com ele. Se a informação adicional não muda a escolha, não vale o tempo que custa." },
+        { "type": "quote", "text": "Quase todas as decisões que lamento não foram escolhas erradas. Foram escolhas certas tomadas tarde de mais." },
+        { "type": "p", "text": "Por fim, escrevo a decisão e a razão dela num sítio onde a possa reler daqui a seis meses. Não para me julgar — para perceber se o meu critério estava bom ou apenas a minha sorte." }
+      ]
+    }
+  ]
+}

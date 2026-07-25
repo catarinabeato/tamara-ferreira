@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Placeholder 16:9">
+  <!-- PLACEHOLDER PROJECTO — proporcao 16:9 (1600x900 px).
+       Substituir por fotografia real com esta proporcao. Ver README.md. -->
+  <rect width="1600" height="900" fill="#E8DECB"/>
+  <rect x="54" y="54" width="1492" height="792" fill="none" stroke="#CD9C20" stroke-width="4"/>
+  <g fill="#8A7A5C" font-family="Helvetica Neue, Arial, sans-serif" text-anchor="middle">
+    <text x="800" y="432" font-size="68" letter-spacing="18">PROJECTO</text>
+    <text x="800" y="513" font-size="41" letter-spacing="11">16:9  ·  1600×900</text>
+  </g>
+</svg>
