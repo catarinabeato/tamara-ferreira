@@ -2,6 +2,13 @@
   "_comment": "Configuração global do site. Editar aqui: domínio, redes sociais, endpoints de formulário e ficheiros de imagem. Os textos estão em content/pt.json e content/en.json.",
 
   "name": "Tamara Ferreira",
+
+  "_nameLines": "O nome como assinatura visual da Home, à maior escala da página. Cada linha é uma quebra intencional; 'italic' fica em itálico de caixa mista, 'roman' fica em maiúsculas. É igual nos dois idiomas, por isso vive aqui e não nos ficheiros de tradução.",
+  "nameLines": [
+    { "text": "Tamara", "style": "italic" },
+    { "text": "Ferreira", "style": "roman" }
+  ],
+
   "baseUrl": "https://www.tamaraferreira.pt",
   "basePath": "",
   "defaultLang": "pt",

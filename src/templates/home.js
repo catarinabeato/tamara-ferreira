@@ -9,24 +9,34 @@ module.exports = function home(ctx) {
   const t = ctx.t;
   const h = t.home;
 
-  /* 1. HERO — fotografia dominante, headline sobreposto, um único CTA. */
+  /*
+   * 1. HERO — o nome é o elemento dominante: assinatura em display, a toda a
+   * largura, acima de tudo o resto. A fotografia segue-o e a frase de
+   * posicionamento passa a linha de apoio, a uma escala claramente menor.
+   */
   const hero = `
 <section class="hero" aria-labelledby="hero-title">
-  <div class="wrap hero__inner">
-    <div class="hero__media">
-      ${figure(ctx, 'heroPortrait', t.imageAlt.heroPortrait, { eager: true, className: 'media--hero' })}
-    </div>
+  <div class="wrap">
+    ${kicker(h.hero.kicker)}
+    ${headline(ctx.site.nameLines, { tag: 'h1', className: 'headline--name', id: 'hero-title' })}
 
-    <div class="hero__text">
-      ${kicker(h.hero.kicker)}
-      ${headline(h.hero.headlineLines, { tag: 'h1', className: 'headline--hero', id: 'hero-title' })}
-      <p class="hero__standfirst">${esc(h.hero.standfirst)}</p>
-      <p class="hero__cta">
-        <a class="button" href="${esc(h.hero.ctaHref)}">${esc(h.hero.cta)}</a>
-      </p>
-    </div>
+    <div class="hero__inner">
+      <div class="hero__media">
+        ${figure(ctx, 'heroPortrait', t.imageAlt.heroPortrait, { eager: true, className: 'media--hero' })}
+      </div>
 
-    <p class="hero__vertical" aria-hidden="true">${esc(t.person.jobTitle)}</p>
+      <div class="hero__text">
+        ${headline(h.hero.taglineLines, { tag: 'p', className: 'headline--tagline' })}
+        <div class="hero__foot">
+          <p class="hero__standfirst">${esc(h.hero.standfirst)}</p>
+          <p class="hero__cta">
+            <a class="button" href="${esc(h.hero.ctaHref)}">${esc(h.hero.cta)}</a>
+          </p>
+        </div>
+      </div>
+
+      <p class="hero__vertical" aria-hidden="true">${esc(t.person.jobTitle)}</p>
+    </div>
   </div>
 </section>`;
 

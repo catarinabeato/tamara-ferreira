@@ -95,7 +95,7 @@
   "home": {
     "hero": {
       "kicker": "Liderança . Inspiração . Motivação",
-      "headlineLines": [
+      "taglineLines": [
         { "text": "Liderança", "style": "italic" },
         { "text": "COM", "style": "roman" },
         { "text": "PROPÓSITO", "style": "roman" }

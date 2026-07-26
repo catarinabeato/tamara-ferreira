@@ -45,7 +45,7 @@ Os títulos grandes alternam maiúsculas e itálico na mesma frase. Cada linha �
 um objecto, e as quebras de linha são intencionais:
 
 ```json
-"headlineLines": [
+"taglineLines": [
   { "text": "Liderança",  "style": "italic" },
   { "text": "COM",        "style": "roman"  },
   { "text": "PROPÓSITO",  "style": "roman"  }
@@ -53,7 +53,28 @@ um objecto, e as quebras de linha são intencionais:
 ```
 
 `italic` fica em itálico com caixa mista; `roman` fica em maiúsculas.
-Acrescentar ou retirar linhas é seguro.
+Acrescentar ou retirar linhas é seguro. O mesmo formato é usado em
+`headlineLines`, nos títulos das páginas Sobre mim, Blog e Contactos.
+
+### O nome na Home
+
+O nome é o elemento com mais destaque do site: é o `h1` da Home, na maior
+escala da página, e recebe o mesmo tratamento — `Tamara` em itálico, `FERREIRA`
+em maiúsculas. Como não muda entre idiomas, está em `content/site.json`:
+
+```json
+"nameLines": [
+  { "text": "Tamara",   "style": "italic" },
+  { "text": "Ferreira", "style": "roman"  }
+]
+```
+
+Para o pôr numa só linha, basta deixar uma entrada: `[{ "text": "Tamara
+Ferreira", "style": "roman" }]`. A escala ajusta-se sozinha à largura do ecrã;
+o tamanho máximo é `--fs-name`, no topo de `main.css`.
+
+A frase de posicionamento (`taglineLines`) fica por baixo, a cerca de um terço
+do tamanho do nome, para que a hierarquia se leia de imediato.
 
 ### Artigos do blog
 
@@ -164,10 +185,14 @@ alterar estes valores, vale a pena reverificar o contraste.
 
 Outras variáveis úteis, no mesmo bloco:
 
-- `--hero-overlap` — quanto o headline avança por cima da fotografia da Home
-  (`0%` desliga a sobreposição, útil se a foto escolhida for escura do lado esquerdo).
+- `--fs-name` — tamanho máximo do nome na Home. É a maior escala do site; se o
+  aumentar, confirme que o botão da newsletter continua visível sem rolar.
+- `--fs-tagline` — tamanho da frase de posicionamento, por baixo do nome.
+- `--hero-overlap` — quanto a frase de apoio avança por cima da fotografia da
+  Home (`0%` desliga a sobreposição, útil se a foto escolhida for escura do
+  lado esquerdo).
 - `--wrap`, `--wrap-narrow`, `--gutter` — largura da grelha e das colunas de texto.
-- `--fs-hero`, `--fs-display`, … — escala tipográfica.
+- `--fs-display`, `--fs-title`, … — restante escala tipográfica.
 
 ---
 

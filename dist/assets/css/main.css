@@ -49,7 +49,8 @@
   --font-body: "Lora", Georgia, "Times New Roman", serif;
 
   /* Escala tipográfica fluida */
-  --fs-hero: clamp(3rem, 8.6vw, 7.5rem);
+  --fs-name: clamp(3rem, 15.5vw, 10rem); /* assinatura da Home — o maior elemento do site */
+  --fs-tagline: clamp(1.5rem, 3.4vw, 2.9rem);
   --fs-display: clamp(2.6rem, 8vw, 6rem);
   --fs-title: clamp(1.8rem, 3.6vw, 3.1rem);
   --fs-subtitle: clamp(1.35rem, 2.2vw, 1.9rem);
@@ -65,8 +66,9 @@
   --wrap-narrow: 40rem; /* ~65 caracteres por linha */
   --gutter: clamp(1.25rem, 5vw, 4.5rem);
 
-  /* Sobreposição do texto do hero sobre a fotografia (só em ecrãs largos). */
-  --hero-overlap: 11%;
+  /* Quanto a frase de apoio do hero avança sobre a fotografia (ecrãs largos).
+     0% desliga a sobreposição. */
+  --hero-overlap: 7%;
 
   --track-kicker: 0.34em;
   --track-nav: 0.18em;
@@ -178,10 +180,23 @@ p:last-child { margin-bottom: 0; }
   text-transform: none;
   letter-spacing: -0.01em;
 }
-.headline--hero { font-size: var(--fs-hero); }
-/* Deslocação das linhas ímpares: ritmo de revista, sem quebrar a leitura. */
-.headline--hero .headline__line--italic { margin-left: 0.06em; }
-.headline--hero .headline__line:nth-child(2) { margin-left: 0.9em; }
+/* O nome, em assinatura. Escala grande, entrelinha fechada e a linha em
+   maiúsculas ligeiramente deslocada, para dar ritmo sem partir a leitura. */
+.headline--name {
+  font-size: var(--fs-name);
+  line-height: 0.82;
+  margin: 0 0 clamp(1.25rem, 2.5vw, 1.9rem);
+}
+.headline--name .headline__line--italic { margin-left: 0.04em; }
+.headline--name .headline__line--roman { letter-spacing: -0.005em; }
+
+/* Frase de posicionamento: mesma linguagem tipográfica, escala subordinada. */
+.headline--tagline {
+  font-size: var(--fs-tagline);
+  line-height: 1;
+  margin: 0 0 1.5rem;
+}
+.headline--tagline .headline__line:nth-child(2) { margin-left: 0.7em; }
 
 .kicker {
   font-family: var(--font-sans);
@@ -192,6 +207,7 @@ p:last-child { margin-bottom: 0; }
   color: var(--accent);
   margin: 0 0 1.25rem;
 }
+.hero .kicker { margin-bottom: 0.85rem; }
 
 .label {
   font-family: var(--font-sans);
@@ -296,8 +312,8 @@ blockquote {
   margin: 0;
   text-align: center;
   font-family: var(--font-sans);
-  font-size: clamp(0.85rem, 1.6vw, 1.05rem);
-  font-weight: 500;
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.42em;
   text-indent: 0.42em; /* compensa o espaçamento à direita */
@@ -429,9 +445,9 @@ blockquote {
 
 /* --------------------------------------------------------- 6. SECÇÕES */
 
-/* Hero: fotografia dominante. Em ecrã pequeno a foto vem primeiro e o texto
-   segue-a — sem sobreposição, para o kicker nunca cair em cima da imagem. */
-.hero { padding-block: clamp(1.5rem, 4vw, 3rem) clamp(4rem, 9vw, 8rem); }
+/* Hero: o nome a toda a largura, e por baixo a fotografia com a frase de
+   apoio. Em ecrã pequeno tudo empilha, sem sobreposições. */
+.hero { padding-block: clamp(1.25rem, 2.5vw, 2rem) clamp(4rem, 9vw, 8rem); }
 
 .hero__inner { position: relative; }
 
@@ -439,6 +455,7 @@ blockquote {
 .media--hero { aspect-ratio: 4 / 5; }
 
 .hero__text { position: relative; margin-top: clamp(1.75rem, 5vw, 2.5rem); }
+.hero__foot { margin-top: 1.5rem; }
 
 .hero__standfirst {
   font-size: var(--fs-lede);
@@ -772,7 +789,7 @@ blockquote {
   padding-block: clamp(3rem, 7vw, 5rem) 2rem;
 }
 .site-footer__inner { display: grid; gap: 2.5rem; }
-.lettermark--footer { text-align: left; font-size: 0.95rem; letter-spacing: 0.3em; }
+.lettermark--footer { text-align: left; font-size: clamp(1.05rem, 2vw, 1.3rem); letter-spacing: 0.3em; }
 .site-footer__tagline { color: var(--ink-soft); margin-top: 0.75rem; }
 .site-footer__title {
   font-family: var(--font-sans);
@@ -838,14 +855,14 @@ blockquote {
 
 @media (min-width: 62em) {
   /*
-   * Hero em duas colunas. minmax(0, …) é obrigatório: sem ele o headline
-   * (min-content muito largo) empurra a coluna de texto e esmaga a fotografia.
-   * O texto invade a imagem em --hero-overlap; ajustar aí a sobreposição.
+   * Abaixo do nome, duas colunas: frase de apoio à esquerda, fotografia à
+   * direita. minmax(0, …) é obrigatório: sem ele o texto em display
+   * (min-content muito largo) empurra a coluna e esmaga a fotografia.
    */
   .hero__inner {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr);
-    align-items: end;
+    align-items: stretch;
     gap: 0;
   }
   .hero__media { grid-column: 2; grid-row: 1; }
@@ -858,12 +875,17 @@ blockquote {
     padding-bottom: clamp(2rem, 5vw, 4rem);
     position: relative;
     z-index: 2;
+    /* A coluna acompanha a altura da fotografia, mas o texto fica agrupado no
+       topo: mantém o CTA acima da dobra e deixa o espaço em baixo a respirar. */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
-  /* Só o headline atravessa a fotografia; o corpo de texto fica sobre o fundo,
-     para o contraste não depender da imagem que vier a ser colocada. */
+  .hero__foot { margin-top: clamp(1.25rem, 2.5vw, 1.9rem); }
+  /* Só a frase de apoio atravessa a fotografia; o corpo de texto fica sobre o
+     fundo, para o contraste não depender da imagem que vier a ser colocada. */
   .hero__standfirst,
   .hero__cta { max-width: 34ch; padding-right: var(--hero-overlap); }
-  .headline--hero .headline__line:nth-child(2) { margin-left: 1.2em; }
 
   .hero__vertical {
     display: block;
