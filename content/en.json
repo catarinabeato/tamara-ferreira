@@ -94,12 +94,7 @@
 
   "home": {
     "hero": {
-      "kicker": "Leadership . Inspiration . Motivation",
-      "taglineLines": [
-        { "text": "Leadership", "style": "italic" },
-        { "text": "WITH", "style": "roman" },
-        { "text": "PURPOSE", "style": "roman" }
-      ],
+      "kicker": "Leadership with Purpose",
       "standfirst": "Entrepreneur, leader and speaker. I help people and organisations grow without losing what makes them distinct.",
       "cta": "Subscribe to the newsletter",
       "ctaHref": "#newsletter",
@@ -162,26 +157,24 @@
 
     "blog": {
       "kicker": "Blog",
-      "title": "Recent notes",
-      "intro": "I write regularly about what I'm learning. No miracle recipes.",
+      "title": "Recent articles",
+      "intro": "I share my thoughts and lessons with you.",
       "link": "See all articles"
     },
 
     "contact": {
       "kicker": "Contact",
-      "title": "Let's talk",
-      "text": "Speaking, training, partnerships or interviews. I answer every message personally, usually within two working days.",
       "addressLabel": "Address",
-      "emailLabel": "Email",
-      "socialLabel": "Social",
+      "emailLabel": "E-mail",
+      "socialLabel": "Social Media",
       "link": "Go to the contact page"
     }
   },
 
   "newsletter": {
     "kicker": "Newsletter",
-    "title": "One letter a month. No more, no less.",
-    "text": "Once a month I send a note on leadership, hard decisions and what I'm building. Written by me, no promotions, nothing forwarded. You can unsubscribe at any time.",
+    "title": "One letter a month. The most vulnerable thing I share.",
+    "text": "Once a month I send a note on leadership, hard decisions and what I'm building. You can unsubscribe at any time.",
     "nameLabel": "Name",
     "namePlaceholder": "Your name",
     "emailLabel": "Email",

@@ -45,22 +45,24 @@ Os títulos grandes alternam maiúsculas e itálico na mesma frase. Cada linha �
 um objecto, e as quebras de linha são intencionais:
 
 ```json
-"taglineLines": [
-  { "text": "Liderança",  "style": "italic" },
-  { "text": "COM",        "style": "roman"  },
-  { "text": "PROPÓSITO",  "style": "roman"  }
+"headlineLines": [
+  { "text": "O percurso", "style": "italic" },
+  { "text": "ATÉ AQUI",   "style": "roman"  }
 ]
 ```
 
 `italic` fica em itálico com caixa mista; `roman` fica em maiúsculas.
-Acrescentar ou retirar linhas é seguro. O mesmo formato é usado em
-`headlineLines`, nos títulos das páginas Sobre mim, Blog e Contactos.
+Acrescentar ou retirar linhas é seguro. É assim que estão feitos os títulos das
+páginas Sobre mim, Blog e Contactos, e o nome na Home (`nameLines`).
 
 ### O nome na Home
 
-O nome é o elemento com mais destaque do site: é o `h1` da Home, na maior
-escala da página, e recebe o mesmo tratamento — `Tamara` em itálico, `FERREIRA`
-em maiúsculas. Como não muda entre idiomas, está em `content/site.json`:
+A Home é uma capa: fotografia de largura total, e o nome em branco por cima,
+centrado, a atravessar a fronteira entre a fotografia e a faixa preta que se
+lhe segue — a metade de cima assenta na imagem, a de baixo na faixa. É o
+elemento com mais destaque do site e é o `h1` da página, com o tratamento da
+casa: `Tamara` em itálico, `FERREIRA` em maiúsculas. Como não muda entre
+idiomas, está em `content/site.json`:
 
 ```json
 "nameLines": [
@@ -73,8 +75,17 @@ Para o pôr numa só linha, basta deixar uma entrada: `[{ "text": "Tamara
 Ferreira", "style": "roman" }]`. A escala ajusta-se sozinha à largura do ecrã;
 o tamanho máximo é `--fs-name`, no topo de `main.css`.
 
-A frase de posicionamento (`taglineLines`) fica por baixo, a cerca de um terço
-do tamanho do nome, para que a hierarquia se leia de imediato.
+Por baixo da faixa preta fica a frase de posicionamento a dourado
+(`home.hero.kicker`), o resumo e o botão da newsletter. Essa frase respeita a
+caixa tal como a escrever no ficheiro — `Liderança com PROPÓSITO` aparece
+exactamente assim, sem passar tudo a maiúsculas.
+
+Na Home o cabeçalho muda de forma: fica transparente por cima da fotografia,
+com as redes sociais à esquerda e o botão da newsletter à direita, e a
+navegação passa para a faixa preta, repartida à esquerda e à direita do nome.
+Nas páginas interiores mantém-se a barra fixa habitual, com o nome ao centro.
+Em ecrã pequeno a faixa não mostra a navegação — quem trata dela é o menu do
+topo.
 
 ### Artigos do blog
 
@@ -121,10 +132,10 @@ Para substituir:
 
 ```json
 "heroPortrait": {
-  "src": "/assets/img/tamara-hero.jpg",
-  "width": 1600,
-  "height": 2000,
-  "ratio": "4:5 (retrato) …"
+  "src": "/assets/img/tamara-capa.jpg",
+  "width": 2400,
+  "height": 1350,
+  "ratio": "16:9 (paisagem) …"
 }
 ```
 
@@ -139,7 +150,7 @@ reserva o espaço na página e evita que o texto salte enquanto a imagem carrega
 
 | Entrada | Proporção | Onde aparece |
 | --- | --- | --- |
-| `heroPortrait` | 4:5 — 1600×2000 | Fotografia principal da Home |
+| `heroPortrait` | 16:9 — 2400×1350 | Capa da Home, de largura total. O nome fica por cima, centrado e em branco, por isso convém que a zona central inferior seja relativamente limpa |
 | `aboutPortrait` | 3:4 — 1200×1600 | Retrato na secção Sobre mim da Home |
 | `aboutFull` | 4:5 — 1600×2000 | Retrato da página Sobre mim |
 | `projectOne` / `projectTwo` | 16:9 — 1600×900 | Projectos na Home |
@@ -187,12 +198,30 @@ Outras variáveis úteis, no mesmo bloco:
 
 - `--fs-name` — tamanho máximo do nome na Home. É a maior escala do site; se o
   aumentar, confirme que o botão da newsletter continua visível sem rolar.
-- `--fs-tagline` — tamanho da frase de posicionamento, por baixo do nome.
-- `--hero-overlap` — quanto a frase de apoio avança por cima da fotografia da
-  Home (`0%` desliga a sobreposição, útil se a foto escolhida for escura do
-  lado esquerdo).
+- `--cover-media-h` — altura da fotografia de capa.
+- `--cover-focus` — enquadramento da fotografia dentro do recorte largo
+  (`50% 28%`; baixar o segundo valor sobe o rosto).
+- `--cover-name-shift` — quanto do nome fica acima da fronteira foto/faixa.
+- `--scrim-base`, `--scrim-top`, `--scrim-bottom` — intensidade do degradê
+  escuro sobre a fotografia. Ver a nota abaixo antes de mexer.
 - `--wrap`, `--wrap-narrow`, `--gutter` — largura da grelha e das colunas de texto.
 - `--fs-display`, `--fs-title`, … — restante escala tipográfica.
+
+### O degradê sobre a fotografia de capa
+
+O nome e a barra de topo são brancos, sobre a fotografia. Para que se leiam
+sempre, a fotografia leva por baixo um degradê escuro — o *scrim*. Sem ele, uma
+fotografia clara (como a que foi entregue, de fundo branco) deixaria o texto
+praticamente invisível.
+
+Os valores actuais foram escolhidos para o pior caso possível — uma fotografia
+completamente branca — e nesse caso dão 5.5:1 na barra de topo e entre 5.2:1 e
+7.0:1 no nome, acima dos mínimos AA (4.5:1 para texto pequeno, 3:1 para texto
+grande). Com uma fotografia normal o contraste é sempre melhor do que isto.
+
+É um compromisso: quanto mais baixo o scrim, mais fiel fica a fotografia e
+menos contraste tem o texto. Se o baixar, vale a pena confirmar a legibilidade
+com a fotografia real.
 
 ---
 

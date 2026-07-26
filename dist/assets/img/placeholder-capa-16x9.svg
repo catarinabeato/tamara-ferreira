@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" width="2400" height="1350" role="img" aria-label="Placeholder 16:9">
+  <!-- PLACEHOLDER CAPA — proporcao 16:9 (2400x1350 px).
+       Fotografia de largura total do topo da Home. O nome aparece por cima,
+       centrado e em branco, por isso convem deixar a zona central inferior
+       relativamente limpa. Enquadramento afinavel na variavel cover-focus. -->
+  <rect width="2400" height="1350" fill="#E8DECB"/>
+  <rect x="68" y="68" width="2265" height="1215" fill="none" stroke="#CD9C20" stroke-width="5"/>
+  <g fill="#8A7A5C" font-family="Helvetica Neue, Arial, sans-serif" text-anchor="middle">
+    <text x="1200" y="648" font-size="101" letter-spacing="27">CAPA</text>
+    <text x="1200" y="769.5" font-size="54" letter-spacing="16">16:9  ·  2400×1350</text>
+  </g>
+</svg>

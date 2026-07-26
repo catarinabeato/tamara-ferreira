@@ -2,7 +2,7 @@
 
 const { esc, join, headline, formatDate } = require('../lib/html');
 const { layout, personSchema } = require('./layout');
-const { figure, kicker, newsletter, socialList } = require('./partials');
+const { image, figure, kicker, newsletter, socialList, coverNav } = require('./partials');
 const { postCard } = require('./blog');
 
 module.exports = function home(ctx) {
@@ -10,32 +10,44 @@ module.exports = function home(ctx) {
   const h = t.home;
 
   /*
-   * 1. HERO — o nome é o elemento dominante: assinatura em display, a toda a
-   * largura, acima de tudo o resto. A fotografia segue-o e a frase de
-   * posicionamento passa a linha de apoio, a uma escala claramente menor.
+   * 1. HERO — capa editorial.
+   *
+   * Fotografia de largura total, e o nome em branco por cima, centrado, a
+   * atravessar a fronteira entre a fotografia e a faixa preta: a metade de
+   * cima assenta na imagem, a de baixo na faixa. A navegação divide-se à
+   * esquerda e à direita do nome, dentro da faixa.
+   *
+   * A fotografia leva um degradê escuro (o scrim) em cima e em baixo. Sem ele
+   * o texto branco não teria contraste suficiente sobre uma fotografia clara
+   * — e a que foi entregue é clara. A intensidade regula-se em main.css,
+   * nas variáveis --scrim-top e --scrim-bottom.
    */
   const hero = `
-<section class="hero" aria-labelledby="hero-title">
-  <div class="wrap">
-    ${kicker(h.hero.kicker)}
-    ${headline(ctx.site.nameLines, { tag: 'h1', className: 'headline--name', id: 'hero-title' })}
+<section class="hero-cover" aria-labelledby="hero-title">
+  <div class="hero-cover__media">
+    ${image(ctx, 'heroPortrait', {
+      alt: t.imageAlt.heroPortrait,
+      eager: true,
+      className: 'hero-cover__img',
+    })}
+    <span class="hero-cover__scrim" aria-hidden="true"></span>
+  </div>
 
-    <div class="hero__inner">
-      <div class="hero__media">
-        ${figure(ctx, 'heroPortrait', t.imageAlt.heroPortrait, { eager: true, className: 'media--hero' })}
-      </div>
+  <div class="hero-cover__band">
+    <div class="wrap hero-cover__band-inner">
+      ${coverNav(ctx)}
+    </div>
+  </div>
 
-      <div class="hero__text">
-        ${headline(h.hero.taglineLines, { tag: 'p', className: 'headline--tagline' })}
-        <div class="hero__foot">
-          <p class="hero__standfirst">${esc(h.hero.standfirst)}</p>
-          <p class="hero__cta">
-            <a class="button" href="${esc(h.hero.ctaHref)}">${esc(h.hero.cta)}</a>
-          </p>
-        </div>
-      </div>
+  ${headline(ctx.site.nameLines, { tag: 'h1', className: 'headline--name cover-name', id: 'hero-title' })}
 
-      <p class="hero__vertical" aria-hidden="true">${esc(t.person.jobTitle)}</p>
+  <div class="hero-cover__statement">
+    <div class="wrap">
+      <p class="kicker kicker--phrase">${esc(h.hero.kicker)}</p>
+      <p class="cover-standfirst">${esc(h.hero.standfirst)}</p>
+      <p class="cover-cta">
+        <a class="button button--light" href="${esc(h.hero.ctaHref)}">${esc(h.hero.cta)}</a>
+      </p>
     </div>
   </div>
 </section>`;
@@ -129,15 +141,12 @@ module.exports = function home(ctx) {
   /* 6. CONTACTOS (resumo) */
   const contact = `
 <section class="section section--contact" id="contactos" aria-labelledby="home-contact-title">
-  <div class="wrap grid grid--contact">
-    <div class="grid__text">
-      ${kicker(h.contact.kicker)}
-      <h2 class="section__title" id="home-contact-title">${esc(h.contact.title)}</h2>
-      <p class="lede">${esc(h.contact.text)}</p>
-      <p class="more"><a class="link-arrow" href="${esc(ctx.url('contact'))}">${esc(h.contact.link)}</a></p>
-    </div>
+  <div class="wrap center">
+    <!-- Sem título nem frase: "Contactos" é agora o próprio cabeçalho da
+         secção, o que mantém a hierarquia de headings correcta. -->
+    <h2 class="kicker" id="home-contact-title">${esc(h.contact.kicker)}</h2>
 
-    <div class="contact-blocks">
+    <div class="contact-blocks contact-blocks--center">
       <div class="contact-block">
         <h3 class="label">${esc(h.contact.emailLabel)}</h3>
         <p><a href="mailto:${esc(ctx.site.contact.email)}">${esc(ctx.site.contact.email)}</a></p>
@@ -151,6 +160,8 @@ module.exports = function home(ctx) {
         ${socialList(ctx, 'social social--stack')}
       </div>
     </div>
+
+    <p class="more"><a class="link-arrow" href="${esc(ctx.url('contact'))}">${esc(h.contact.link)}</a></p>
   </div>
 </section>`;
 

@@ -39,10 +39,10 @@
     "_comment": "Substituir os ficheiros .svg por fotografias reais (.jpg). Manter as proporções indicadas em cada entrada. Ver README.md.",
 
     "heroPortrait": {
-      "src": "/assets/img/placeholder-retrato-4x5.svg",
-      "width": 1600,
-      "height": 2000,
-      "ratio": "4:5 (retrato) — 1600x2000 px — fotografia principal da Tamara, plano médio, fundo claro"
+      "src": "/assets/img/placeholder-capa-16x9.svg",
+      "width": 2400,
+      "height": 1350,
+      "ratio": "16:9 (paisagem) — 2400x1350 px — fotografia de capa, de largura total no topo da Home. O nome aparece por cima, centrado e em branco, por isso convém que a zona central inferior seja relativamente limpa. O enquadramento afina-se em --cover-focus (main.css)"
     },
     "aboutPortrait": {
       "src": "/assets/img/placeholder-retrato-3x4.svg",

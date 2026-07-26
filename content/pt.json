@@ -94,12 +94,7 @@
 
   "home": {
     "hero": {
-      "kicker": "Liderança . Inspiração . Motivação",
-      "taglineLines": [
-        { "text": "Liderança", "style": "italic" },
-        { "text": "COM", "style": "roman" },
-        { "text": "PROPÓSITO", "style": "roman" }
-      ],
+      "kicker": "Liderança com Propósito",
       "standfirst": "Empresária, líder e speaker. Ajudo pessoas e organizações a crescer sem perderem aquilo que as torna distintas.",
       "cta": "Subscrever a newsletter",
       "ctaHref": "#newsletter",
@@ -162,26 +157,24 @@
 
     "blog": {
       "kicker": "Blog",
-      "title": "Notas recentes",
-      "intro": "Escrevo com regularidade sobre o que estou a aprender. Sem receitas milagrosas.",
+      "title": "Artigos recentes",
+      "intro": "Partilho contigo os meus pensamentos e aprendizagens.",
       "link": "Ver todos os artigos"
     },
 
     "contact": {
       "kicker": "Contactos",
-      "title": "Vamos falar",
-      "text": "Palestras, formação, parcerias ou entrevistas. Respondo pessoalmente a todas as mensagens, normalmente em dois dias úteis.",
       "addressLabel": "Morada",
-      "emailLabel": "Email",
-      "socialLabel": "Redes",
+      "emailLabel": "E-mail",
+      "socialLabel": "Redes Sociais",
       "link": "Ir para a página de contactos"
     }
   },
 
   "newsletter": {
     "kicker": "Newsletter",
-    "title": "Uma carta por mês. Nem mais, nem menos.",
-    "text": "Uma vez por mês envio uma nota sobre liderança, decisões difíceis e o que estou a construir. Texto escrito por mim, sem promoções e sem reencaminhamentos. Pode cancelar a subscrição em qualquer momento.",
+    "title": "Uma carta por mês. A minha partilha mais vulnerável.",
+    "text": "Uma vez por mês envio uma nota sobre liderança, decisões difíceis e o que estou a construir. Pode cancelar a subscrição em qualquer momento.",
     "nameLabel": "Nome",
     "namePlaceholder": "O seu nome",
     "emailLabel": "Email",

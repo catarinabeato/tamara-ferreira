@@ -49,8 +49,7 @@
   --font-body: "Lora", Georgia, "Times New Roman", serif;
 
   /* Escala tipográfica fluida */
-  --fs-name: clamp(3rem, 15.5vw, 10rem); /* assinatura da Home — o maior elemento do site */
-  --fs-tagline: clamp(1.5rem, 3.4vw, 2.9rem);
+  --fs-name: clamp(3rem, 15vw, 12rem); /* assinatura da Home — o maior elemento do site */
   --fs-display: clamp(2.6rem, 8vw, 6rem);
   --fs-title: clamp(1.8rem, 3.6vw, 3.1rem);
   --fs-subtitle: clamp(1.35rem, 2.2vw, 1.9rem);
@@ -66,9 +65,28 @@
   --wrap-narrow: 40rem; /* ~65 caracteres por linha */
   --gutter: clamp(1.25rem, 5vw, 4.5rem);
 
-  /* Quanto a frase de apoio do hero avança sobre a fotografia (ecrãs largos).
-     0% desliga a sobreposição. */
-  --hero-overlap: 7%;
+  /* --- Capa da Home ------------------------------------------------------
+     --cover-media-h      altura da fotografia de largura total
+     --cover-band-h       altura da faixa preta com a navegação
+     --cover-name-shift   quanto do nome fica acima da fronteira foto/faixa
+     --cover-name-gap     espaço reservado ao nome, entre os dois grupos de nav
+     --cover-focus        enquadramento da fotografia dentro do recorte largo
+     --scrim-top/-bottom  intensidade do degradê que garante o contraste     */
+  --cover-bg: var(--c-black);
+  --cover-ink: #ffffff;
+  --cover-ink-soft: #e3ddd0; /* 14.6:1 sobre --cover-bg */
+  --cover-media-h: clamp(18rem, 58vh, 40rem);
+  /* A faixa acompanha o tamanho do nome, não a altura do ecrã: como o
+     apelido é largo, atravessa a faixa quase a toda a largura e os links têm
+     de ficar por baixo do seu remate. Dá cerca de 26px de folga real dos
+     glifos, de 768 a 1920 px. */
+  --cover-band-h: calc(var(--fs-name) * 0.3 + 4.2rem);
+  --cover-name-shift: 84%;
+  --cover-name-gap: clamp(13rem, 34vw, 40rem);
+  --cover-focus: 50% 28%;
+  --scrim-base: 0.46;
+  --scrim-top: 0.34;
+  --scrim-bottom: 0.42;
 
   --track-kicker: 0.34em;
   --track-nav: 0.18em;
@@ -188,16 +206,13 @@ p:last-child { margin-bottom: 0; }
   margin: 0 0 clamp(1.25rem, 2.5vw, 1.9rem);
 }
 .headline--name .headline__line--italic { margin-left: 0.04em; }
-.headline--name .headline__line--roman { letter-spacing: -0.005em; }
-
-/* Frase de posicionamento: mesma linguagem tipográfica, escala subordinada. */
-.headline--tagline {
-  font-size: var(--fs-tagline);
-  line-height: 1;
-  margin: 0 0 1.5rem;
+.headline--name .headline__line--roman {
+  letter-spacing: -0.005em;
+  /* Respeita a caixa escrita em site.json → nameLines. */
+  text-transform: none;
 }
-.headline--tagline .headline__line:nth-child(2) { margin-left: 0.7em; }
 
+/* Etiqueta de secção: sans condensada, maiúsculas, muito espaçada. */
 .kicker {
   font-family: var(--font-sans);
   font-size: var(--fs-kicker);
@@ -207,7 +222,14 @@ p:last-child { margin-bottom: 0; }
   color: var(--accent);
   margin: 0 0 1.25rem;
 }
-.hero .kicker { margin-bottom: 0.85rem; }
+/* Frase de posicionamento, a dourado. Ao contrario dos kickers, respeita a
+   caixa tal como foi escrita no ficheiro de conteudo. */
+.kicker--phrase {
+  text-transform: none;
+  letter-spacing: 0.09em;
+  font-size: clamp(1.2rem, 2.2vw, 1.7rem);
+  font-weight: 600;
+}
 
 .label {
   font-family: var(--font-sans);
@@ -357,6 +379,65 @@ blockquote {
   border-left: 1px solid var(--rule-strong);
 }
 
+/* Variante da Home: barra transparente por cima da fotografia de capa. */
+.site-header--overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  background: none;
+  backdrop-filter: none;
+  border-bottom: 0;
+  color: var(--cover-ink);
+}
+.site-header--overlay.is-scrolled { border-bottom-color: transparent; }
+.site-header__inner--overlay {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.9rem, 2vw, 1.6rem);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.social-icons a {
+  display: block;
+  color: inherit;
+  transition: opacity 0.25s var(--ease);
+}
+.social-icons a:hover { opacity: 0.65; }
+.social-icons svg { width: 1.25rem; height: 1.25rem; display: block; }
+.social-icons__text {
+  font-family: var(--font-sans);
+  font-size: var(--fs-label);
+  text-transform: uppercase;
+  letter-spacing: var(--track-nav);
+}
+
+.header-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  color: inherit;
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: var(--fs-label);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--track-kicker);
+  white-space: nowrap;
+}
+.header-cta .arrow { width: clamp(2.5rem, 5vw, 4.5rem); height: 0.625rem; display: block; }
+.header-cta .arrow path { transition: transform 0.3s var(--ease); }
+.header-cta:hover .arrow path { transform: translateX(4px); }
+
 .nav-toggle {
   display: none;
   justify-self: end;
@@ -375,6 +456,13 @@ blockquote {
   border-top: 1px solid var(--rule);
   padding: 1.5rem var(--gutter) 2rem;
 }
+/* Na capa o menu abre por cima da fotografia, por isso precisa de fundo. */
+.site-header--overlay .mobile-menu {
+  background: var(--cover-bg);
+  color: var(--cover-ink);
+  border-top-color: var(--rule-invert);
+}
+.site-header--overlay .mobile-menu .lang__item + .lang__item { border-left-color: var(--rule-invert); }
 .mobile-menu[hidden] { display: none; }
 .mobile-menu__list {
   list-style: none;
@@ -445,27 +533,133 @@ blockquote {
 
 /* --------------------------------------------------------- 6. SECÇÕES */
 
-/* Hero: o nome a toda a largura, e por baixo a fotografia com a frase de
-   apoio. Em ecrã pequeno tudo empilha, sem sobreposições. */
-.hero { padding-block: clamp(1.25rem, 2.5vw, 2rem) clamp(4rem, 9vw, 8rem); }
-
-.hero__inner { position: relative; }
-
-.hero__media { width: 100%; }
-.media--hero { aspect-ratio: 4 / 5; }
-
-.hero__text { position: relative; margin-top: clamp(1.75rem, 5vw, 2.5rem); }
-.hero__foot { margin-top: 1.5rem; }
-
-.hero__standfirst {
-  font-size: var(--fs-lede);
-  line-height: 1.6;
-  color: var(--ink-soft);
-  max-width: 40ch;
-  margin-bottom: 2rem;
+/*
+ * Capa editorial da Home.
+ *
+ * Fotografia de largura total; por baixo, a faixa preta com a navegação; e o
+ * nome, em branco, a atravessar a fronteira entre as duas. O nome está
+ * posicionado em absoluto e centrado, com --cover-name-shift a definir quanto
+ * dele fica acima da fronteira.
+ */
+.hero-cover {
+  position: relative;
+  background: var(--cover-bg);
+  color: var(--cover-ink);
 }
 
-.hero__vertical { display: none; }
+.hero-cover__media {
+  position: relative;
+  height: var(--cover-media-h);
+  overflow: hidden;
+  background: var(--bg-alt);
+}
+.hero-cover__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Enquadramento da fotografia dentro do recorte largo.
+     Subir o segundo valor puxa o rosto para cima. */
+  object-position: var(--cover-focus);
+}
+
+/*
+ * Degradê escuro sobre a fotografia. É o que garante o contraste do texto
+ * branco: mesmo que a fotografia seja toda branca, o topo fica em 6.4:1 e a
+ * zona do nome em 4.3:1 — acima dos mínimos AA (4.5:1 para texto pequeno,
+ * 3:1 para texto grande). Baixar estes valores devolve fidelidade à
+ * fotografia, mas tira contraste ao texto.
+ */
+.hero-cover__scrim {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    /* Reforço no topo, onde assenta a barra com as redes e o CTA. */
+    linear-gradient(
+      to bottom,
+      rgba(11, 11, 11, var(--scrim-top)) 0%,
+      rgba(11, 11, 11, calc(var(--scrim-top) * 0.4)) 20%,
+      rgba(11, 11, 11, 0) 40%
+    ),
+    /* Reforço em baixo, onde assenta o nome. */
+    linear-gradient(
+      to top,
+      rgba(11, 11, 11, var(--scrim-bottom)) 0%,
+      rgba(11, 11, 11, calc(var(--scrim-bottom) * 0.8)) 30%,
+      rgba(11, 11, 11, calc(var(--scrim-bottom) * 0.45)) 55%,
+      rgba(11, 11, 11, 0) 80%
+    ),
+    /* Base uniforme: o nome é alto e sobe até meio da fotografia, onde os
+       degradês já não chegam. */
+    linear-gradient(rgba(11, 11, 11, var(--scrim-base)), rgba(11, 11, 11, var(--scrim-base)));
+}
+
+/* Faixa preta com a navegação, dividida à volta do nome. */
+.hero-cover__band {
+  min-height: var(--cover-band-h);
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: clamp(0.9rem, 2vh, 1.4rem);
+}
+.hero-cover__band-inner { width: 100%; }
+
+.cover-nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  justify-items: center;
+}
+.cover-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem clamp(1.25rem, 4vw, 3.25rem);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* Uma linha só: se a navegação quebrasse, subia e batia no remate do nome. */
+.cover-nav__list--left,
+.cover-nav__list--right { flex-wrap: nowrap; }
+.cover-nav .nav__link,
+.cover-nav .lang__item { color: var(--cover-ink); }
+.cover-nav .lang__item.is-current { color: var(--accent-invert); }
+.cover-nav .lang__item + .lang__item { border-left-color: var(--rule-invert); }
+
+/* O nome, a atravessar a fronteira entre a fotografia e a faixa. */
+.cover-name {
+  position: absolute;
+  top: var(--cover-media-h);
+  left: 0;
+  right: 0;
+  transform: translateY(calc(var(--cover-name-shift) * -1));
+  margin: 0;
+  padding-inline: var(--gutter);
+  text-align: center;
+  color: var(--cover-ink);
+  z-index: 3;
+  /* Passa por cima da faixa: não pode roubar os cliques da navegação. */
+  pointer-events: none;
+}
+
+/* Bloco de texto por baixo da faixa. */
+.hero-cover__statement {
+  text-align: center;
+  padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(3.5rem, 8vw, 6.5rem);
+}
+.hero-cover__statement .kicker { color: var(--accent-invert); margin-bottom: 1rem; }
+
+.cover-standfirst {
+  font-size: var(--fs-lede);
+  line-height: 1.6;
+  max-width: 52ch;
+  margin: 0 auto 1.5rem;
+  color: var(--cover-ink-soft);
+}
+/* Centrado: as deslocações de ritmo das linhas dariam cabo do eixo. */
+.cover-name .headline__line { margin-left: 0; }
+.cover-cta { margin-top: clamp(1.75rem, 4vw, 2.5rem); }
 
 /* Grelhas assimétricas */
 .grid { display: grid; gap: var(--space-block); }
@@ -473,6 +667,17 @@ blockquote {
 .grid--about .grid__media { max-width: 22rem; }
 
 .contact-blocks { display: grid; gap: 2rem; }
+.contact-blocks--center {
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+  justify-items: center;
+  text-align: center;
+  /* Sem isto as três colunas espalham-se por toda a largura e deixam de se
+     ler como um grupo. */
+  max-width: 52rem;
+  margin-inline: auto;
+}
+.contact-blocks--center .social--stack { align-items: center; }
+.section--contact .more { margin-top: var(--space-block); }
 .contact-block a { text-decoration: none; border-bottom: 1px solid var(--rule); }
 .contact-block a:hover { border-bottom-color: var(--ink); }
 .address { font-style: normal; line-height: 1.8; }
@@ -837,12 +1042,28 @@ blockquote {
 @media (max-width: 47.99em) {
   .nav { display: none; }
   .nav-toggle { display: inline-block; }
+  /* Na capa, a navegação vive no menu do topo; a faixa fica só como fundo
+     para o remate do nome, e por isso pode ser bem mais baixa. */
+  .cover-nav { display: none; }
+  .header-cta { display: none; }
+  .hero-cover__band { padding-bottom: 0; }
+  :root { --cover-band-h: calc(var(--fs-name) * 0.22 + 1.25rem); }
   .site-header__inner { grid-template-columns: 1fr auto; }
   .lettermark { text-align: left; letter-spacing: 0.28em; text-indent: 0; }
 }
 
 @media (min-width: 48em) {
   .mobile-menu { display: none !important; }
+
+  /* A navegação da capa abre-se para os dois lados, deixando o centro livre
+     para o nome. --cover-name-gap reserva esse espaço. */
+  .cover-nav {
+    grid-template-columns: 1fr var(--cover-name-gap) 1fr;
+    align-items: center;
+    gap: 0;
+  }
+  .cover-nav__list--left { grid-column: 1; justify-content: flex-start; }
+  .cover-nav__list--right { grid-column: 3; justify-content: flex-end; }
 
   .cards { grid-template-columns: repeat(3, 1fr); }
   .cards--list { grid-template-columns: repeat(2, 1fr); row-gap: clamp(3rem, 6vw, 5rem); }
@@ -854,54 +1075,6 @@ blockquote {
 }
 
 @media (min-width: 62em) {
-  /*
-   * Abaixo do nome, duas colunas: frase de apoio à esquerda, fotografia à
-   * direita. minmax(0, …) é obrigatório: sem ele o texto em display
-   * (min-content muito largo) empurra a coluna e esmaga a fotografia.
-   */
-  .hero__inner {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr);
-    align-items: stretch;
-    gap: 0;
-  }
-  .hero__media { grid-column: 2; grid-row: 1; }
-  .media--hero { aspect-ratio: 4 / 5; }
-
-  .hero__text {
-    grid-column: 1;
-    grid-row: 1;
-    margin: 0 calc(var(--hero-overlap) * -1) 0 0;
-    padding-bottom: clamp(2rem, 5vw, 4rem);
-    position: relative;
-    z-index: 2;
-    /* A coluna acompanha a altura da fotografia, mas o texto fica agrupado no
-       topo: mantém o CTA acima da dobra e deixa o espaço em baixo a respirar. */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  .hero__foot { margin-top: clamp(1.25rem, 2.5vw, 1.9rem); }
-  /* Só a frase de apoio atravessa a fotografia; o corpo de texto fica sobre o
-     fundo, para o contraste não depender da imagem que vier a ser colocada. */
-  .hero__standfirst,
-  .hero__cta { max-width: 34ch; padding-right: var(--hero-overlap); }
-
-  .hero__vertical {
-    display: block;
-    position: absolute;
-    left: -0.5rem;
-    bottom: 0;
-    transform: rotate(180deg);
-    writing-mode: vertical-rl;
-    margin: 0;
-    font-family: var(--font-sans);
-    font-size: var(--fs-label);
-    text-transform: uppercase;
-    letter-spacing: var(--track-kicker);
-    color: var(--ink-soft);
-  }
-
   .grid--about { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: start; }
   .grid--about .grid__media { max-width: none; }
   .grid--about .grid__text { padding-top: clamp(2rem, 5vw, 4.5rem); }

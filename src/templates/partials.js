@@ -53,24 +53,43 @@ function kicker(text, tag = 'p') {
   return `<${tag} class="kicker">${esc(text)}</${tag}>`;
 }
 
-function header(ctx) {
+/*
+ * Ícones das redes sociais. A chave é o nome em site.json em minúsculas e sem
+ * espaços; se não houver ícone para uma rede, o nome aparece em texto.
+ */
+const SOCIAL_ICONS = {
+  instagram:
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.3" cy="6.7" r="1.15" fill="currentColor" stroke="none"/></svg>',
+  linkedin:
+    '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3.2 9h3.6v12H3.2V9Zm6.4 0h3.45v1.64h.05c.48-.9 1.75-1.86 3.6-1.86 3.85 0 4.56 2.4 4.56 5.5V21h-3.6v-5.5c0-1.31-.02-3-1.85-3-1.86 0-2.14 1.4-2.14 2.9V21H9.6V9Z"/></svg>',
+  youtube:
+    '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22.6 7.2a2.7 2.7 0 0 0-1.9-1.9C19 4.85 12 4.85 12 4.85s-7 0-8.7.45A2.7 2.7 0 0 0 1.4 7.2C.95 8.9.95 12 .95 12s0 3.1.45 4.8a2.7 2.7 0 0 0 1.9 1.9c1.7.45 8.7.45 8.7.45s7 0 8.7-.45a2.7 2.7 0 0 0 1.9-1.9c.45-1.7.45-4.8.45-4.8s0-3.1-.45-4.8ZM9.75 15.3V8.7L15.5 12l-5.75 3.3Z"/></svg>',
+};
+
+/* Seta longa do CTA, no espírito da referência. */
+const ARROW =
+  '<svg class="arrow" viewBox="0 0 72 10" aria-hidden="true" focusable="false"><path d="M0 5h67M61 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/></svg>';
+
+function socialIcons(ctx, className = 'social-icons') {
+  return `<ul class="${esc(className)}" aria-label="${esc(ctx.t.ui.socialNav)}">
+      ${ctx.site.social
+        .map((item) => {
+          const icon = SOCIAL_ICONS[item.name.toLowerCase().replace(/[^a-z0-9]/g, '')];
+          const label = icon
+            ? `<span class="visually-hidden">${esc(item.name)}</span>`
+            : `<span class="social-icons__text">${esc(item.name)}</span>`;
+          return `<li><a href="${esc(item.url)}" rel="me noopener noreferrer" target="_blank">${
+            icon || ''
+          }${label}</a></li>`;
+        })
+        .join('\n      ')}
+    </ul>`;
+}
+
+/* Alterna entre PT e EN mantendo o visitante na página equivalente. */
+function languageSwitch(ctx) {
   const t = ctx.t;
-  const navLinks = [
-    { label: t.nav.about, href: ctx.url('about') },
-    { label: t.nav.blog, href: ctx.url('blog') },
-    { label: t.nav.contact, href: ctx.url('contact') },
-  ];
-
-  const isCurrent = (href) => href === ctx.currentPath;
-
-  const link = (item) =>
-    `<li><a class="nav__link${isCurrent(item.href) ? ' is-current' : ''}"${attrs({
-      href: item.href,
-      'aria-current': isCurrent(item.href) ? 'page' : false,
-    })}>${esc(item.label)}</a></li>`;
-
-  /* Alterna entre PT e EN mantendo o visitante na página equivalente. */
-  const languageSwitch = ctx.languages
+  return ctx.languages
     .map((lang) => {
       const active = lang.code === ctx.lang;
       return active
@@ -82,6 +101,79 @@ function header(ctx) {
           )}</a>`;
     })
     .join('');
+}
+
+function navLinksFor(ctx) {
+  const t = ctx.t;
+  return [
+    { label: t.nav.about, href: ctx.url('about') },
+    { label: t.nav.blog, href: ctx.url('blog') },
+    { label: t.nav.contact, href: ctx.url('contact') },
+  ];
+}
+
+function mobileMenu(ctx) {
+  const t = ctx.t;
+  return `
+  <div class="mobile-menu" id="menu-mobile" hidden>
+    <nav aria-label="${esc(t.ui.menu)}">
+      <ul class="mobile-menu__list">
+        ${navLinksFor(ctx)
+          .map((item) => `<li><a href="${esc(item.href)}">${esc(item.label)}</a></li>`)
+          .join('\n        ')}
+      </ul>
+    </nav>
+    <p class="mobile-menu__lang" role="group" aria-label="${esc(t.ui.languageNav)}">${languageSwitch(ctx)}</p>
+  </div>`;
+}
+
+function navToggle(ctx) {
+  const t = ctx.t;
+  return `<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-mobile" data-nav-toggle>
+      <span class="nav-toggle__label" data-nav-label-open="${esc(t.ui.menu)}" data-nav-label-close="${esc(
+        t.ui.close
+      )}">${esc(t.ui.menu)}</span>
+      <span class="visually-hidden" data-nav-sr>${esc(t.ui.openMenu)}</span>
+    </button>`;
+}
+
+/*
+ * Cabeçalho.
+ *
+ * Na Home usa a variante sobreposta: barra transparente por cima da
+ * fotografia de capa, com as redes à esquerda e o CTA à direita. Aí o nome
+ * gigante da capa faz de lettermark e a navegação vive na faixa preta, por
+ * baixo da fotografia (ver hero-cover, em home.js).
+ *
+ * Nas páginas interiores mantém-se a barra fixa, com o nome ao centro.
+ */
+function header(ctx) {
+  const t = ctx.t;
+  const isCover = ctx.pageId === 'home';
+  const isCurrent = (href) => href === ctx.currentPath;
+
+  const link = (item) =>
+    `<li><a class="nav__link${isCurrent(item.href) ? ' is-current' : ''}"${attrs({
+      href: item.href,
+      'aria-current': isCurrent(item.href) ? 'page' : false,
+    })}>${esc(item.label)}</a></li>`;
+
+  if (isCover) {
+    return `
+<header class="site-header site-header--overlay" id="topo">
+  <a class="skip-link" href="#conteudo">${esc(t.ui.skipToContent)}</a>
+  <div class="site-header__inner site-header__inner--overlay">
+    ${socialIcons(ctx)}
+    <a class="header-cta" href="${esc(ctx.t.home.hero.ctaHref)}">
+      <span>${esc(ctx.t.home.hero.cta)}</span>${ARROW}
+    </a>
+    ${navToggle(ctx)}
+  </div>
+${mobileMenu(ctx)}
+</header>`;
+  }
+
+  const navLinks = navLinksFor(ctx);
 
   return `
 <header class="site-header" id="topo">
@@ -99,27 +191,32 @@ function header(ctx) {
     <nav class="nav nav--right" aria-label="${esc(t.ui.languageNav)}">
       <ul class="nav__list">
         ${link(navLinks[2])}
-        <li class="lang" role="group" aria-label="${esc(t.ui.languageNav)}">${languageSwitch}</li>
+        <li class="lang" role="group" aria-label="${esc(t.ui.languageNav)}">${languageSwitch(ctx)}</li>
       </ul>
     </nav>
 
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-mobile" data-nav-toggle>
-      <span class="nav-toggle__label" data-nav-label-open="${esc(t.ui.menu)}" data-nav-label-close="${esc(
-        t.ui.close
-      )}">${esc(t.ui.menu)}</span>
-      <span class="visually-hidden" data-nav-sr>${esc(t.ui.openMenu)}</span>
-    </button>
+    ${navToggle(ctx)}
   </div>
-
-  <div class="mobile-menu" id="menu-mobile" hidden>
-    <nav aria-label="${esc(t.ui.mainNav)}">
-      <ul class="mobile-menu__list">
-        ${navLinks.map((item) => `<li><a href="${esc(item.href)}">${esc(item.label)}</a></li>`).join('\n        ')}
-      </ul>
-    </nav>
-    <p class="mobile-menu__lang" role="group" aria-label="${esc(t.ui.languageNav)}">${languageSwitch}</p>
-  </div>
+${mobileMenu(ctx)}
 </header>`;
+}
+
+/* Navegação da faixa preta da capa, dividida à volta do nome. */
+function coverNav(ctx) {
+  const t = ctx.t;
+  const navLinks = navLinksFor(ctx);
+  const link = (item) => `<li><a class="nav__link" href="${esc(item.href)}">${esc(item.label)}</a></li>`;
+
+  return `<nav class="cover-nav" aria-label="${esc(t.ui.mainNav)}">
+      <ul class="cover-nav__list cover-nav__list--left">
+        ${link(navLinks[0])}
+        ${link(navLinks[1])}
+      </ul>
+      <ul class="cover-nav__list cover-nav__list--right">
+        ${link(navLinks[2])}
+        <li class="lang" role="group" aria-label="${esc(t.ui.languageNav)}">${languageSwitch(ctx)}</li>
+      </ul>
+    </nav>`;
 }
 
 function newsletter(ctx, { id = 'newsletter' } = {}) {
@@ -223,4 +320,4 @@ function footer(ctx) {
 </footer>`;
 }
 
-module.exports = { image, figure, kicker, header, footer, newsletter, socialList };
+module.exports = { image, figure, kicker, header, footer, newsletter, socialList, socialIcons, coverNav };
