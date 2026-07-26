@@ -184,18 +184,22 @@ dobra.
 Todas as cores estão no topo de `src/assets/css/main.css`, num único bloco
 `:root`. Alterar aí muda o site inteiro.
 
+O site assenta em **fundo preto com texto branco**, de ponta a ponta.
+
 O bloco tem duas partes:
 
 - **Paleta da marca** (`--c-black`, `--c-bege`, `--c-gold`, …) — os valores
   entregues, tal como estão.
 - **Tons de trabalho** (`--bg`, `--ink`, `--accent`, …) — o que os componentes
-  usam de facto.
+  usam de facto. É só nestes que se deve mexer.
 
-Os dourados da marca são luminosos de mais para texto pequeno sobre o bege
-(`Gold #A07F3A` dá 3.19:1, abaixo do mínimo AA de 4.5:1). Por isso o texto de
-acento usa versões escurecidas da mesma matiz, e os tons originais ficam
-reservados para áreas grandes, fundos escuros e elementos decorativos. Se
-alterar estes valores, vale a pena reverificar o contraste.
+O dourado da marca é escuro de mais para se ler sobre preto, por isso o tom de
+acento é uma versão aclarada da mesma matiz (`#D9A93F`). Alguns tokens ainda
+se chamam `--ink-invert`, `--rule-invert` e afins: são anteriores à passagem
+para fundo escuro e hoje apontam para os mesmos valores dos seus pares.
+Ficaram assim para não espalhar renomeações por toda a folha de estilos.
+
+Se alterar estes valores, vale a pena reverificar o contraste.
 
 Outras variáveis úteis, no mesmo bloco:
 
@@ -230,9 +234,13 @@ com a fotografia real.
 
 ## Tipografia
 
-- **Playfair Display** — headlines (romano e itálico, contraste alto)
-- **Barlow Condensed** — kickers, navegação e etiquetas, sempre em maiúsculas espaçadas
-- **Lora** — corpo de texto
+- **Bodoni Moda** — headlines e títulos. Serifa de contraste muito alto, com
+  itálico, no espírito da referência.
+- **Jost** — corpo de texto, kickers, navegação e etiquetas. Sans geométrico;
+  nos kickers vai em maiúsculas muito espaçadas.
+
+As hairlines da Bodoni são finas de propósito: funcionam em corpo grande, mas
+não devem ser usadas para texto corrido — é para isso que existe a Jost.
 
 Os ficheiros estão alojados no próprio servidor, em `src/assets/fonts/`, e
 declarados em `src/assets/css/fonts.css`. Não há qualquer pedido ao Google:
@@ -242,7 +250,8 @@ de Privacidade e simplifica o cumprimento do RGPD.
 Estão incluídos os subconjuntos `latin` e `latin-ext` (cobrem PT-PT e EN), com
 `font-display: swap`. Os quatro cortes visíveis acima da dobra são
 pré-carregados (`<link rel="preload">`); a lista está em
-`src/templates/layout.js`, na constante `PRELOAD_FONTS`.
+`src/templates/layout.js`, na constante `PRELOAD_FONTS`. Se trocar de tipo de
+letra, é essa lista que tem de acompanhar a mudança.
 
 As fontes são distribuídas sob a SIL Open Font License 1.1.
 

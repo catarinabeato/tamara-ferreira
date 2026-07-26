@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" width="1200" height="1600" role="img" aria-label="Placeholder 3:4">
-  <!-- PLACEHOLDER RETRATO — proporcao 3:4 (1200x1600 px).
+  <!-- PLACEHOLDER RETRATO - proporcao 3:4 (1200x1600 px).
        Substituir por fotografia real com esta proporcao. Ver README.md. -->
-  <rect width="1200" height="1600" fill="#E8DECB"/>
-  <rect x="72" y="72" width="1056" height="1456" fill="none" stroke="#CD9C20" stroke-width="5"/>
-  <g fill="#8A7A5C" font-family="Helvetica Neue, Arial, sans-serif" text-anchor="middle">
-    <text x="600" y="776" font-size="90" letter-spacing="24">RETRATO</text>
-    <text x="600" y="884" font-size="54" letter-spacing="14">3:4  ·  1200×1600</text>
+  <rect width="1200" height="1600" fill="#17171A"/>
+  <rect x="60" y="60" width="1080" height="1480" fill="none" stroke="#4A4A46" stroke-width="5"/>
+  <g fill="#8A8579" font-family="Helvetica Neue, Arial, sans-serif" text-anchor="middle">
+    <text x="600" y="776" font-size="84" letter-spacing="24">RETRATO</text>
+    <text x="600" y="884" font-size="48" letter-spacing="14">3:4  1200x1600</text>
   </g>
 </svg>

@@ -9,10 +9,10 @@ const { header, footer } = require('./partials');
  * normalmente através de fonts.css, com font-display: swap.
  */
 const PRELOAD_FONTS = [
-  'playfair-display-400-italic-latin.woff2',
-  'playfair-display-500-latin.woff2',
-  'barlow-condensed-500-latin.woff2',
-  'lora-400-latin.woff2',
+  'bodoni-moda-400-italic-latin.woff2',
+  'bodoni-moda-400-latin.woff2',
+  'jost-400-latin.woff2',
+  'jost-500-latin.woff2',
 ];
 
 /*
@@ -63,7 +63,7 @@ function layout(ctx, { title, description, body, bodyClass = '', structuredData 
   <meta name="twitter:title" content="${esc(title)}">
   <meta name="twitter:description" content="${esc(description)}">
   <meta name="twitter:image" content="${esc(ogImage)}">
-  <meta name="theme-color" content="#F2ECDD">
+  <meta name="theme-color" content="#0B0B0B">
 
   <link rel="icon" href="${esc(ctx.asset('/assets/img/favicon.svg'))}" type="image/svg+xml">
 

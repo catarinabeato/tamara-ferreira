@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-label="Placeholder 3:2">
-  <!-- PLACEHOLDER ARTIGO — proporcao 3:2 (1200x800 px).
+  <!-- PLACEHOLDER ARTIGO - proporcao 3:2 (1200x800 px).
        Substituir por fotografia real com esta proporcao. Ver README.md. -->
-  <rect width="1200" height="800" fill="#E8DECB"/>
-  <rect x="48" y="48" width="1104" height="704" fill="none" stroke="#CD9C20" stroke-width="3"/>
-  <g fill="#8A7A5C" font-family="Helvetica Neue, Arial, sans-serif" text-anchor="middle">
-    <text x="600" y="384" font-size="60" letter-spacing="16">ARTIGO</text>
-    <text x="600" y="456" font-size="36" letter-spacing="10">3:2  ·  1200×800</text>
+  <rect width="1200" height="800" fill="#17171A"/>
+  <rect x="40" y="40" width="1120" height="720" fill="none" stroke="#4A4A46" stroke-width="3"/>
+  <g fill="#8A8579" font-family="Helvetica Neue, Arial, sans-serif" text-anchor="middle">
+    <text x="600" y="384" font-size="56" letter-spacing="16">ARTIGO</text>
+    <text x="600" y="456" font-size="32" letter-spacing="10">3:2  1200x800</text>
   </g>
 </svg>

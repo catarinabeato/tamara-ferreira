@@ -21,32 +21,33 @@
   --c-white: #ffffff;
 
   /*
-   * Tons de trabalho derivados da paleta acima.
-   * Os dourados da marca são luminosos de mais para texto pequeno sobre bege
-   * (Gold dá 3.19:1, abaixo do mínimo AA de 4.5:1), por isso o texto usa
-   * versões escurecidas da mesma matiz. Os tons originais continuam a ser
-   * usados em áreas grandes, sobre fundo escuro e em elementos decorativos.
-   * Usar sempre estas variáveis nos componentes, nunca a paleta directa.
+   * Esquema escuro: o site inteiro assenta em preto, com texto branco.
+   * Os tokens abaixo são os que os componentes usam — a paleta da marca
+   * acima nunca é aplicada directamente.
+   *
+   * Os nomes "invert" são anteriores à passagem para fundo escuro. Agora que
+   * tudo é escuro, apontam para os mesmos valores; ficam como estão para não
+   * espalhar renomeações por toda a folha.
    */
-  --bg: var(--c-bege);
-  --bg-alt: var(--c-areia);
-  --bg-invert: var(--c-grey);
-  --ink: var(--c-black);
-  --ink-soft: #4a4c49; /* 7.4:1 sobre --bg */
-  --ink-invert: var(--c-bege);
-  --ink-invert-soft: #d8d2c4; /* 9.6:1 sobre --bg-invert */
-  --accent: #80642c; /* Gold escurecido — 4.7:1 sobre --bg */
-  --accent-strong: #985a21; /* Âmbar escurecido — 4.7:1 sobre --bg */
-  --accent-invert: var(--c-saffron); /* 8.0:1 sobre --bg-invert */
-  --rule: #cdc4b1; /* filetes decorativos */
-  --rule-strong: #847a63; /* contornos de campos de formulário — 3.6:1 */
-  --rule-invert: #7a7e78; /* 3.0:1 sobre --bg-invert */
-  --focus: #985a21;
+  --bg: #0b0b0b;
+  --bg-alt: #17171a; /* painéis e reserva de espaço das imagens */
+  --bg-invert: #16161a; /* faixa da newsletter, um pouco acima do preto */
+  --ink: #ffffff;
+  --ink-soft: #bdb8ad; /* cinza quente, para texto secundário */
+  --ink-invert: var(--ink);
+  --ink-invert-soft: var(--ink-soft);
+  --accent: #d9a93f; /* dourado da marca, aclarado para ler sobre preto */
+  --accent-strong: #e2a05f;
+  --accent-invert: var(--accent);
+  --rule: #2f2f31; /* filetes discretos */
+  --rule-strong: #6f6c66; /* contornos de campos de formulário */
+  --rule-invert: var(--rule-strong);
+  --focus: var(--c-saffron);
 
   /* Tipos de letra */
-  --font-display: "Playfair Display", "Iowan Old Style", Georgia, serif;
-  --font-sans: "Barlow Condensed", "Helvetica Neue", Arial, sans-serif;
-  --font-body: "Lora", Georgia, "Times New Roman", serif;
+  --font-display: "Bodoni Moda", "Didot", "Bodoni MT", Georgia, serif;
+  --font-sans: "Jost", "Futura", "Century Gothic", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Jost", "Futura", "Century Gothic", "Helvetica Neue", Arial, sans-serif;
 
   /* Escala tipográfica fluida */
   --fs-name: clamp(3rem, 15vw, 12rem); /* assinatura da Home — o maior elemento do site */
@@ -147,7 +148,7 @@ a { color: inherit; }
   transform: translate(-50%, -120%);
   z-index: 100;
   background: var(--ink);
-  color: var(--ink-invert);
+  color: var(--bg);
   padding: 0.75rem 1.5rem;
   font-family: var(--font-sans);
   text-transform: uppercase;
@@ -492,7 +493,7 @@ blockquote {
   text-decoration: none;
   padding: 1rem 2.25rem;
   background: var(--ink);
-  color: var(--ink-invert);
+  color: var(--bg);
   border: 1px solid var(--ink);
   border-radius: 0;
   cursor: pointer;
@@ -500,12 +501,10 @@ blockquote {
 }
 .button:hover { background: transparent; color: var(--ink); }
 
-.button--light {
-  background: var(--bg);
-  color: var(--ink);
-  border-color: var(--bg);
-}
-.button--light:hover { background: transparent; color: var(--ink-invert); border-color: var(--ink-invert); }
+/* Sobre fundo escuro o botão claro é o mesmo botão. O modificador mantém-se
+   para não partir marcação já existente. */
+.button--light { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.button--light:hover { background: transparent; color: var(--ink); border-color: var(--ink); }
 
 .link-arrow {
   font-family: var(--font-sans);
@@ -912,7 +911,14 @@ blockquote {
 
 /* Mapa */
 .map { aspect-ratio: 16 / 9; background: var(--bg-alt); }
-.map iframe { width: 100%; height: 100%; border: 0; display: block; filter: grayscale(1) contrast(0.95); }
+.map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  /* Invertido: um mapa claro abriria um rectângulo branco no meio do preto. */
+  filter: grayscale(1) invert(0.92) contrast(0.9);
+}
 
 /* ------------------------------------------------------ 7. FORMULÁRIOS */
 

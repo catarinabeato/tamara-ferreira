@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Placeholder 1.91:1">
-  <!-- PLACEHOLDER OPEN GRAPH — proporcao 1.91:1 (1200x630 px).
+  <!-- PLACEHOLDER OPEN GRAPH - proporcao 1.91:1 (1200x630 px).
        Substituir por fotografia real com esta proporcao. Ver README.md. -->
-  <rect width="1200" height="630" fill="#E8DECB"/>
-  <rect x="38" y="38" width="1124" height="554" fill="none" stroke="#CD9C20" stroke-width="3"/>
-  <g fill="#8A7A5C" font-family="Helvetica Neue, Arial, sans-serif" text-anchor="middle">
-    <text x="600" y="302.4" font-size="47" letter-spacing="13">OPEN GRAPH</text>
-    <text x="600" y="359.1" font-size="28" letter-spacing="8">1.91:1  ·  1200×630</text>
+  <rect width="1200" height="630" fill="#17171A"/>
+  <rect x="32" y="32" width="1137" height="567" fill="none" stroke="#4A4A46" stroke-width="3"/>
+  <g fill="#8A8579" font-family="Helvetica Neue, Arial, sans-serif" text-anchor="middle">
+    <text x="600" y="302.4" font-size="44" letter-spacing="13">OPEN GRAPH</text>
+    <text x="600" y="359.1" font-size="25" letter-spacing="8">1.91:1  1200x630</text>
   </g>
 </svg>
