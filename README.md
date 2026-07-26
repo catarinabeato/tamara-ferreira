@@ -148,14 +148,17 @@ reserva o espaço na página e evita que o texto salte enquanto a imagem carrega
 
 ### Proporções usadas
 
+As fotografias já colocadas estão em `src/assets/img/`; o original de maior
+resolução da capa fica em `source-images/`, fora da pasta que é publicada.
+
 | Entrada | Proporção | Onde aparece |
 | --- | --- | --- |
-| `heroPortrait` | 16:9 — 2400×1350 | Capa da Home, de largura total. O nome fica por cima, centrado e em branco, por isso convém que a zona central inferior seja relativamente limpa |
+| `heroPortrait` | 16:9 — 2400×1353 | Capa da Home, de largura total. O nome fica por cima, centrado e em branco, por isso convém que a zona central inferior seja relativamente limpa |
 | `aboutPortrait` | 3:4 — 1200×1600 | Retrato na secção Sobre mim da Home |
 | `aboutFull` | 4:5 — 1600×2000 | Retrato da página Sobre mim |
 | `projectOne` / `projectTwo` | 16:9 — 1600×900 | Projectos na Home |
 | `post…` | 3:2 — 1200×800 | Artigos. Nos cartões aparece a 3:2; no topo do artigo é recortada para 16:9, por isso convém deixar margem em cima e em baixo |
-| `ogImage` | 1.91:1 — 1200×630 | Partilha em redes sociais |
+| `ogImage` | 16:9 | Partilha em redes sociais. Usa a mesma fotografia da capa; para uma imagem dedicada, o ideal é 1200×630 |
 
 ### Formatos modernos (WebP / AVIF)
 

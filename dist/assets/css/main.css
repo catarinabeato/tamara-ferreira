@@ -75,7 +75,10 @@
   --cover-bg: var(--c-black);
   --cover-ink: #ffffff;
   --cover-ink-soft: #e3ddd0; /* 14.6:1 sobre --cover-bg */
-  --cover-media-h: clamp(18rem, 58vh, 40rem);
+  /* 56.4vw é a altura natural da fotografia (3370x1900) à largura do ecrã:
+     mostra-a praticamente sem corte vertical, o que mantém o rosto acima do
+     nome. Encurtar isto faz o nome subir para cima da cara. */
+  --cover-media-h: clamp(24rem, 56.4vw, 56rem);
   /* A faixa acompanha o tamanho do nome, não a altura do ecrã: como o
      apelido é largo, atravessa a faixa quase a toda a largura e os links têm
      de ficar por baixo do seu remate. Dá cerca de 26px de folga real dos
@@ -84,9 +87,9 @@
   --cover-name-shift: 84%;
   --cover-name-gap: clamp(13rem, 34vw, 40rem);
   --cover-focus: 50% 28%;
-  --scrim-base: 0.46;
-  --scrim-top: 0.34;
-  --scrim-bottom: 0.42;
+  --scrim-base: 0.22;
+  --scrim-top: 0.55;
+  --scrim-bottom: 0.5;
 
   --track-kicker: 0.34em;
   --track-nav: 0.18em;
@@ -528,8 +531,8 @@ blockquote {
   overflow: hidden;
   background: var(--bg-alt);
 }
-.media img,
-.media picture { width: 100%; height: 100%; object-fit: cover; }
+.media img { width: 100%; height: 100%; object-fit: cover; }
+.media picture { display: block; width: 100%; height: 100%; }
 
 /* --------------------------------------------------------- 6. SECÇÕES */
 
@@ -553,6 +556,7 @@ blockquote {
   overflow: hidden;
   background: var(--bg-alt);
 }
+.hero-cover__media picture { display: block; width: 100%; height: 100%; }
 .hero-cover__img {
   width: 100%;
   height: 100%;
@@ -574,12 +578,15 @@ blockquote {
   inset: 0;
   pointer-events: none;
   background:
-    /* Reforço no topo, onde assenta a barra com as redes e o CTA. */
+    /* Reforço no topo, onde assenta a barra com as redes e o CTA. Em píxeis e
+       não em percentagem: em percentagem desvanecia-se cedo de mais quando a
+       fotografia é baixa, e a barra perdia contraste em ecrã pequeno. */
     linear-gradient(
       to bottom,
-      rgba(11, 11, 11, var(--scrim-top)) 0%,
-      rgba(11, 11, 11, calc(var(--scrim-top) * 0.4)) 20%,
-      rgba(11, 11, 11, 0) 40%
+      rgba(11, 11, 11, var(--scrim-top)) 0,
+      rgba(11, 11, 11, calc(var(--scrim-top) * 0.82)) 70px,
+      rgba(11, 11, 11, calc(var(--scrim-top) * 0.33)) 150px,
+      rgba(11, 11, 11, 0) 260px
     ),
     /* Reforço em baixo, onde assenta o nome. */
     linear-gradient(

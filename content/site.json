@@ -39,9 +39,10 @@
     "_comment": "Substituir os ficheiros .svg por fotografias reais (.jpg). Manter as proporções indicadas em cada entrada. Ver README.md.",
 
     "heroPortrait": {
-      "src": "/assets/img/placeholder-capa-16x9.svg",
+      "src": "/assets/img/tamara-capa.jpg",
+      "formats": ["webp"],
       "width": 2400,
-      "height": 1350,
+      "height": 1353,
       "ratio": "16:9 (paisagem) — 2400x1350 px — fotografia de capa, de largura total no topo da Home. O nome aparece por cima, centrado e em branco, por isso convém que a zona central inferior seja relativamente limpa. O enquadramento afina-se em --cover-focus (main.css)"
     },
     "aboutPortrait": {
@@ -57,13 +58,13 @@
       "ratio": "4:5 (retrato) — 1600x2000 px — retrato editorial da página Sobre mim"
     },
     "projectOne": {
-      "src": "/assets/img/placeholder-projecto-16x9.svg",
+      "src": "/assets/img/atlas-recepcao.jpg",
       "width": 1600,
       "height": 900,
       "ratio": "16:9 (paisagem) — 1600x900 px — recepção do Atlas Language Center"
     },
     "projectTwo": {
-      "src": "/assets/img/placeholder-projecto-16x9.svg",
+      "src": "/assets/img/atlas-sala-nexus.jpg",
       "width": 1600,
       "height": 900,
       "ratio": "16:9 (paisagem) — 1600x900 px — sala Nexus / espaço de formação"
@@ -105,10 +106,10 @@
       "ratio": "3:2 (paisagem) — 1200x800 px — imagem de destaque de artigo. Nos cartões aparece a 3:2 (sem corte); no topo do artigo é recortada para 16:9, por isso deixar margem em cima e em baixo"
     },
     "ogImage": {
-      "src": "/assets/img/placeholder-og-1200x630.svg",
-      "width": 1200,
-      "height": 630,
-      "ratio": "1.91:1 — 1200x630 px — imagem de partilha em redes sociais (Open Graph)"
+      "src": "/assets/img/tamara-capa.jpg",
+      "width": 2400,
+      "height": 1353,
+      "ratio": "16:9 — imagem de partilha em redes sociais (Open Graph). Usa a mesma fotografia da capa; para uma imagem dedicada, o ideal é 1200x630 px"
     }
   }
 }
